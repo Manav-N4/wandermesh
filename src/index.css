@@ -503,7 +503,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 20px;
-  max-width: 700px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -512,32 +512,71 @@ ul {
   min-width: 0;
 }
 
-.testimonial-card {
+.testimonial-split-card {
   background: #fff;
   border-radius: var(--card-radius);
-  padding: 32px;
   box-shadow: var(--card-shadow);
-  text-align: center;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  overflow: hidden;
+  min-height: 320px;
 }
 
-.testimonial-user-img {
-  margin-bottom: 20px;
-}
-
-.testimonial-img-placeholder {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--color-border);
+.testimonial-media {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  font-size: 0.75rem;
-  color: var(--color-label);
+  background: var(--color-cream);
 }
 
-.testimonial-card blockquote {
+.testimonial-photo-placeholder {
+  width: 180px;
+  height: 220px;
+  border-radius: 16px;
+  background: var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-label);
+  font-size: 0.8rem;
+  gap: 8px;
+}
+
+.testimonial-photo-placeholder span {
+  font-size: 2rem;
+}
+
+.testimonial-reel-placeholder {
+  width: 170px;
+  height: 302px;
+  border-radius: 16px;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.reel-play-icon {
+  font-size: 2.5rem;
+}
+
+.testimonial-reel-placeholder p {
+  font-size: 0.8rem;
+}
+
+.testimonial-text-side {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-text-side blockquote {
   font-size: 0.92rem;
   color: var(--color-text-secondary);
   line-height: 1.75;
@@ -549,23 +588,6 @@ ul {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-text);
-}
-
-.testimonial-video-card .testimonial-video-placeholder {
-  background: #1a1a2e;
-  border-radius: 12px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 20px;
-}
-
-.testimonial-video-placeholder span {
-  font-size: 2.5rem;
-  margin-bottom: 8px;
 }
 
 .carousel-arrow {
