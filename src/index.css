@@ -149,17 +149,7 @@ ul {
   object-fit: cover;
 }
 
-.hero-video-placeholder {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.3);
-  font-size: 1.5rem;
-  font-family: var(--font-body);
-}
+/* hero-video-placeholder removed - using real videos */
 
 .hero-overlay {
   position: absolute;
