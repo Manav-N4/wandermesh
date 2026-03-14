@@ -891,9 +891,18 @@ ul {
 }
 
 .exclusion-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.exclusion-list li {
+  background: var(--color-cream);
+  border-radius: 16px;
+  padding: 20px 24px;
   color: var(--color-text-secondary);
-  font-size: 0.92rem;
-  line-height: 2;
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
 .exclusion-list li::before {
