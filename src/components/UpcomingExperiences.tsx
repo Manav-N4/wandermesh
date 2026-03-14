@@ -22,7 +22,7 @@ const experiences = [
 ];
 
 const UpcomingExperiences = () => (
-  <section className="experiences">
+  <section className="experiences" id="upcoming-experiences">
     <div className="container">
       <p className="section-label">Upcoming Experiences</p>
       <div className="experiences-grid">

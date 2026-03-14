@@ -23,14 +23,13 @@ const features = [
 
 const MeetSection = () => (
   <section className="meet-section">
-    <div className="container">
-      <p className="section-label">Meet WanderMesh</p>
+    <div className="meet-bg" style={{ backgroundImage: 'url(/images/about-placeholder.jpg)' }} />
+    <div className="meet-overlay" />
+    <div className="container meet-content-wrapper">
+      <p className="section-label" style={{ color: '#fff' }}>Meet WanderMesh</p>
       <div className="meet-intro">
         <p>
-          WanderMesh is a curated circle of luxury solo travellers, creators, founders, and modern explorers who seek depth beyond destinations.
-        </p>
-        <p>
-          Every experience is intentionally crafted, from the stays we choose to the energy we attract, so you do not just travel the world, you transform through it.
+          WanderMesh is a curated travel collective bringing together explorers, creators, founders, and curious minds who want more than just destinations. Our journeys are designed to spark conversations, friendships, and experiences that stay with you long after the trip ends.
         </p>
         <h3>What Makes WanderMesh Different</h3>
       </div>
