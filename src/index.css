@@ -426,16 +426,16 @@ ul {
   padding: var(--section-spacing) 0;
 }
 
-.gallery-grid {
+.gallery-masonry {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-auto-rows: 200px;
+  gap: 16px;
 }
 
 .gallery-item {
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 1;
 }
 
 .gallery-item img {
@@ -449,16 +449,27 @@ ul {
   transform: scale(1.08);
 }
 
+.gallery-item-1 { grid-row: span 2; }
+.gallery-item-4 { grid-row: span 2; }
+.gallery-item-7 { grid-row: span 2; }
+
 /* Testimonials */
 .testimonials-section {
   padding: var(--section-spacing) 0;
   background: var(--color-cream);
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  flex: 1;
+  min-width: 0;
 }
 
 .testimonial-card {
@@ -466,6 +477,24 @@ ul {
   border-radius: var(--card-radius);
   padding: 32px;
   box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.testimonial-user-img {
+  margin-bottom: 20px;
+}
+
+.testimonial-img-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  color: var(--color-label);
 }
 
 .testimonial-card blockquote {
@@ -480,6 +509,67 @@ ul {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-text);
+}
+
+.testimonial-video-card .testimonial-video-placeholder {
+  background: #1a1a2e;
+  border-radius: 12px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+}
+
+.testimonial-video-placeholder span {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.carousel-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.carousel-arrow:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.testimonial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.testimonial-dot.active {
+  background: var(--color-accent);
 }
 
 /* Invite Form */
