@@ -972,7 +972,7 @@ ul {
 /* Responsive */
 @media (max-width: 900px) {
   .experiences-grid,
-  .features-grid,
+  .about-features-grid,
   .inclusions-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -991,6 +991,14 @@ ul {
 
   .hero h1 {
     font-size: 2.4rem;
+  }
+
+  .testimonial-split-card {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .exclusion-list {
+    grid-template-columns: 1fr;
   }
 }
 
