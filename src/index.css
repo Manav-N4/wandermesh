@@ -341,34 +341,74 @@ ul {
   margin-bottom: 16px;
 }
 
-.meet-intro h3 {
+.meet-learn-more {
+  margin-top: 28px;
+  display: inline-block;
+}
+
+/* About Page */
+.about-page {
+  margin-top: 72px;
+}
+
+.about-hero-banner {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.about-hero-content h1 {
   font-family: var(--font-display);
-  font-size: 1.6rem;
-  margin-top: 32px;
+  font-size: 2.6rem;
   color: #fff;
 }
 
-.features-grid {
+.about-features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
+  padding: 48px 0 var(--section-spacing);
 }
 
-.feature-card {
-  background: rgba(255,255,255,0.95);
+.about-feature-card {
+  background: #fff;
   border-radius: var(--card-radius);
   padding: 32px;
   box-shadow: var(--card-shadow);
 }
 
-.feature-card h4 {
+.about-feature-card h3 {
   font-family: var(--font-display);
   font-size: 1.15rem;
   margin-bottom: 12px;
   color: var(--color-text);
 }
 
-.feature-card p {
+.about-feature-card p {
   color: var(--color-text-secondary);
   font-size: 0.9rem;
   line-height: 1.7;
