@@ -691,7 +691,30 @@ ul {
 /* Trip Detail Page */
 .trip-page {
   margin-top: 72px;
-  padding: 48px 0 var(--section-spacing);
+}
+
+.trip-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+}
+
+.trip-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trip-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.35));
+}
+
+.trip-page > .container {
+  padding-top: 32px;
+  padding-bottom: var(--section-spacing);
 }
 
 .trip-back {
@@ -743,6 +766,44 @@ ul {
   font-size: 0.95rem;
 }
 
+/* Tabs */
+.trip-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.trip-tab {
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s ease;
+}
+
+.trip-tab.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.trip-tab:hover {
+  color: var(--color-text);
+}
+
+.trip-tab-content {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+}
+
 .inclusions-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -750,10 +811,9 @@ ul {
 }
 
 .inclusion-item {
-  background: #fff;
+  background: var(--color-cream);
   border-radius: 16px;
   padding: 24px;
-  box-shadow: var(--card-shadow);
 }
 
 .inclusion-item h4 {
@@ -780,58 +840,77 @@ ul {
   font-weight: 600;
 }
 
-.itinerary-list {
+/* Accordion */
+.itinerary-accordion {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
-.itinerary-day {
+.accordion-item {
   background: #fff;
   border-radius: 16px;
-  padding: 24px 28px;
   box-shadow: var(--card-shadow);
   border-left: 4px solid var(--color-accent);
+  overflow: hidden;
 }
 
-.itinerary-day h4 {
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
   font-family: var(--font-display);
   font-size: 1.1rem;
-  margin-bottom: 8px;
   color: var(--color-accent);
+  transition: background 0.2s ease;
 }
 
-.itinerary-day p {
+.accordion-trigger:hover {
+  background: rgba(15, 118, 110, 0.04);
+}
+
+.accordion-icon {
+  font-size: 1.4rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 28px;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 200px;
+  padding: 0 28px 20px;
+}
+
+.accordion-content p {
   color: var(--color-text-secondary);
   font-size: 0.9rem;
   line-height: 1.7;
-  margin-bottom: 8px;
-}
-
-.itinerary-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.itinerary-highlights span {
-  background: var(--color-cream);
-  color: var(--color-text-secondary);
-  font-size: 0.78rem;
-  padding: 4px 12px;
-  border-radius: 9999px;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .experiences-grid,
   .features-grid,
-  .testimonials-grid,
   .inclusions-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery-grid {
+  .gallery-masonry {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .steps-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -867,11 +946,25 @@ ul {
 
   .experiences-grid,
   .features-grid,
-  .testimonials-grid,
-  .gallery-grid,
+  .gallery-masonry,
   .footer-grid,
-  .inclusions-grid {
+  .inclusions-grid,
+  .steps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-masonry {
+    grid-auto-rows: 240px;
+  }
+
+  .gallery-item-1,
+  .gallery-item-4,
+  .gallery-item-7 {
+    grid-row: span 1;
+  }
+
+  .trip-hero-banner {
+    height: 240px;
   }
 
   .trip-header-info h1 {
