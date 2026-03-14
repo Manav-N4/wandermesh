@@ -1024,10 +1024,11 @@ ul {
   }
 
   .experiences-grid,
-  .features-grid,
+  .about-features-grid,
   .gallery-masonry,
   .footer-grid,
   .inclusions-grid,
+  .exclusion-list,
   .steps-grid {
     grid-template-columns: 1fr;
   }
@@ -1042,6 +1043,19 @@ ul {
     grid-row: span 1;
   }
 
+  .testimonial-split-card {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-media {
+    padding: 24px;
+  }
+
+  .testimonial-reel-placeholder {
+    height: 240px;
+    width: 135px;
+  }
+
   .trip-hero-banner {
     height: 240px;
   }
@@ -1053,5 +1067,9 @@ ul {
   .trip-meta {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 1.8rem;
   }
 }
