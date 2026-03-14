@@ -132,17 +132,66 @@ ul {
   overflow: hidden;
 }
 
-.hero-bg {
+.hero-video-slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.hero-video-slide.active {
+  opacity: 1;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video-placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 1.5rem;
+  font-family: var(--font-body);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.hero-dot.active {
+  background: #fff;
+  border-color: #fff;
 }
 
 .hero-content {
@@ -256,8 +305,27 @@ ul {
 
 /* Meet Section */
 .meet-section {
+  position: relative;
   padding: var(--section-spacing) 0;
-  background: var(--color-cream);
+  overflow: hidden;
+}
+
+.meet-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.meet-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.meet-content-wrapper {
+  position: relative;
+  z-index: 2;
 }
 
 .meet-intro {
@@ -267,7 +335,7 @@ ul {
 }
 
 .meet-intro p {
-  color: var(--color-text-secondary);
+  color: rgba(255,255,255,0.85);
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 16px;
@@ -277,6 +345,7 @@ ul {
   font-family: var(--font-display);
   font-size: 1.6rem;
   margin-top: 32px;
+  color: #fff;
 }
 
 .features-grid {
@@ -286,7 +355,7 @@ ul {
 }
 
 .feature-card {
-  background: #fff;
+  background: rgba(255,255,255,0.95);
   border-radius: var(--card-radius);
   padding: 32px;
   box-shadow: var(--card-shadow);
@@ -305,21 +374,68 @@ ul {
   line-height: 1.7;
 }
 
+/* How to Sign Up Steps */
+.signup-steps-section {
+  padding: var(--section-spacing) 0;
+  background: var(--color-cream);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.step-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 32px 24px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.step-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.step-number {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.step-desc {
+  color: var(--color-text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
 /* Gallery */
 .gallery-section {
   padding: var(--section-spacing) 0;
 }
 
-.gallery-grid {
+.gallery-masonry {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-auto-rows: 200px;
+  gap: 16px;
 }
 
 .gallery-item {
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 1;
 }
 
 .gallery-item img {
@@ -333,16 +449,27 @@ ul {
   transform: scale(1.08);
 }
 
+.gallery-item-1 { grid-row: span 2; }
+.gallery-item-4 { grid-row: span 2; }
+.gallery-item-7 { grid-row: span 2; }
+
 /* Testimonials */
 .testimonials-section {
   padding: var(--section-spacing) 0;
   background: var(--color-cream);
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  flex: 1;
+  min-width: 0;
 }
 
 .testimonial-card {
@@ -350,6 +477,24 @@ ul {
   border-radius: var(--card-radius);
   padding: 32px;
   box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.testimonial-user-img {
+  margin-bottom: 20px;
+}
+
+.testimonial-img-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  color: var(--color-label);
 }
 
 .testimonial-card blockquote {
@@ -364,6 +509,67 @@ ul {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-text);
+}
+
+.testimonial-video-card .testimonial-video-placeholder {
+  background: #1a1a2e;
+  border-radius: 12px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+}
+
+.testimonial-video-placeholder span {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.carousel-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.carousel-arrow:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.testimonial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.testimonial-dot.active {
+  background: var(--color-accent);
 }
 
 /* Invite Form */
@@ -485,7 +691,30 @@ ul {
 /* Trip Detail Page */
 .trip-page {
   margin-top: 72px;
-  padding: 48px 0 var(--section-spacing);
+}
+
+.trip-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+}
+
+.trip-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trip-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.35));
+}
+
+.trip-page > .container {
+  padding-top: 32px;
+  padding-bottom: var(--section-spacing);
 }
 
 .trip-back {
@@ -537,6 +766,44 @@ ul {
   font-size: 0.95rem;
 }
 
+/* Tabs */
+.trip-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.trip-tab {
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s ease;
+}
+
+.trip-tab.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.trip-tab:hover {
+  color: var(--color-text);
+}
+
+.trip-tab-content {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+}
+
 .inclusions-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -544,10 +811,9 @@ ul {
 }
 
 .inclusion-item {
-  background: #fff;
+  background: var(--color-cream);
   border-radius: 16px;
   padding: 24px;
-  box-shadow: var(--card-shadow);
 }
 
 .inclusion-item h4 {
@@ -574,58 +840,77 @@ ul {
   font-weight: 600;
 }
 
-.itinerary-list {
+/* Accordion */
+.itinerary-accordion {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
-.itinerary-day {
+.accordion-item {
   background: #fff;
   border-radius: 16px;
-  padding: 24px 28px;
   box-shadow: var(--card-shadow);
   border-left: 4px solid var(--color-accent);
+  overflow: hidden;
 }
 
-.itinerary-day h4 {
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
   font-family: var(--font-display);
   font-size: 1.1rem;
-  margin-bottom: 8px;
   color: var(--color-accent);
+  transition: background 0.2s ease;
 }
 
-.itinerary-day p {
+.accordion-trigger:hover {
+  background: rgba(15, 118, 110, 0.04);
+}
+
+.accordion-icon {
+  font-size: 1.4rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 28px;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 200px;
+  padding: 0 28px 20px;
+}
+
+.accordion-content p {
   color: var(--color-text-secondary);
   font-size: 0.9rem;
   line-height: 1.7;
-  margin-bottom: 8px;
-}
-
-.itinerary-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.itinerary-highlights span {
-  background: var(--color-cream);
-  color: var(--color-text-secondary);
-  font-size: 0.78rem;
-  padding: 4px 12px;
-  border-radius: 9999px;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .experiences-grid,
   .features-grid,
-  .testimonials-grid,
   .inclusions-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery-grid {
+  .gallery-masonry {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .steps-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -661,11 +946,25 @@ ul {
 
   .experiences-grid,
   .features-grid,
-  .testimonials-grid,
-  .gallery-grid,
+  .gallery-masonry,
   .footer-grid,
-  .inclusions-grid {
+  .inclusions-grid,
+  .steps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-masonry {
+    grid-auto-rows: 240px;
+  }
+
+  .gallery-item-1,
+  .gallery-item-4,
+  .gallery-item-7 {
+    grid-row: span 1;
+  }
+
+  .trip-hero-banner {
+    height: 240px;
   }
 
   .trip-header-info h1 {
