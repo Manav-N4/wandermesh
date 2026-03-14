@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 
 const slides = [
-  { id: 1, label: 'Slide 1' },
-  { id: 2, label: 'Slide 2' },
-  { id: 3, label: 'Slide 3' },
+  { id: 1, src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+  { id: 2, src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4' },
+  { id: 3, src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4' },
 ];
 
 const Hero = () => {
@@ -34,9 +34,8 @@ const Hero = () => {
           className={`hero-video-slide ${i === current ? 'active' : ''}`}
         >
           <video muted autoPlay loop playsInline className="hero-video">
-            <source src="" type="video/mp4" />
+            <source src={slide.src} type="video/mp4" />
           </video>
-          <div className="hero-video-placeholder">Video {slide.id}</div>
         </div>
       ))}
       <div className="hero-overlay" />
