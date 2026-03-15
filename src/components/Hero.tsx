@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 
 const slides = [
-  { id: 1, src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
-  { id: 2, src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4' },
-  { id: 3, src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4' },
+  { id: 1, src: '/videos/goa wandermesh 2.0 drone.mp4' },
+  { id: 2, src: '/videos/goa wandermesh 2.0 drone.mp4' },
+  { id: 3, src: '/videos/goa wandermesh 2.0 drone.mp4' },
 ];
 
 const Hero = () => {
