@@ -1,18 +1,13 @@
 import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useInviteModal } from '../context/InviteModalContext';
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { openModal } = useInviteModal();
 
   const handleInviteClick = () => {
-    if (location.pathname === '/') {
-      document.getElementById('request-invite')?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/');
-      setTimeout(() => {
-        document.getElementById('request-invite')?.scrollIntoView({ behavior: 'smooth' });
-      }, 300);
-    }
+    openModal();
   };
 
   return (

@@ -2,26 +2,20 @@ const steps = [
   {
     number: 1,
     label: 'STEP 1',
-    title: 'Submit Your Invite Request',
-    description: 'Start by filling out the short invite form. This helps us understand who you are, what you do, and what kind of experiences excite you.',
+    title: 'Request an Invite',
+    description: 'Choose your preferred experience and submit your invite request.',
   },
   {
     number: 2,
     label: 'STEP 2',
-    title: 'Share Your Story',
-    description: 'Tell us a little about your world — your work, passions, and the perspective you bring into a group experience.',
+    title: 'Get Selected',
+    description: 'We carefully curate the right tribe by reviewing every application and reaching out to shortlisted travelers.',
   },
   {
     number: 3,
     label: 'STEP 3',
-    title: 'We Curate the Crew',
-    description: 'Every WanderMesh trip is intentionally curated. We bring together people whose energy, interests, and curiosity complement each other.',
-  },
-  {
-    number: 4,
-    label: 'STEP 4',
-    title: 'Receive Your Invite',
-    description: "Once selected, you'll receive your invite to confirm your spot and prepare for the experience ahead.",
+    title: 'Join the Tribe',
+    description: 'Our Experience Curator will walk you through the trip details, confirm your spot, and get you ready for an unforgettable journey.',
   },
 ];
 
@@ -55,26 +49,13 @@ const IconCommunity = () => (
   </svg>
 );
 
-const IconTicket = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 12C8 10.134 9.134 9 11 9H37C38.866 9 40 10.134 40 12V24H8V12Z" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M8 24V36C8 37.866 9.134 39 11 39H37C38.866 39 40 37.866 40 36V24" stroke="currentColor" strokeWidth="1.5" />
-    <line x1="8" y1="24" x2="40" y2="24" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2,2" />
-    <circle cx="20" cy="32" r="2.5" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M28 31L32 35M36 31L32 35" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-const icons = [IconForm, IconConversation, IconCommunity, IconTicket];
+const icons = [IconForm, IconConversation, IconCommunity];
 
 const HowToSignUp = () => (
   <section className="signup-steps-section">
     <div className="container">
       <div className="signup-header">
         <p className="section-label">How to Join a WanderMesh Experience</p>
-        <p className="signup-subtitle">
-          A simple process designed to bring together the right people for unforgettable journeys.
-        </p>
       </div>
       <div className="steps-pathway">
         {steps.map((step, idx) => {

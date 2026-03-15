@@ -19,16 +19,66 @@ const exclusions = [
 ];
 
 const itinerary = [
-  { day: 'Day 1', desc: 'Arrival and welcome dinner.' },
-  { day: 'Day 2', desc: 'Explore Ubud rice terraces and temples.' },
-  { day: 'Day 3', desc: 'Waterfall exploration.' },
-  { day: 'Day 4', desc: 'Local markets and cultural workshops.' },
-  { day: 'Day 5', desc: 'Travel to beach town.' },
-  { day: 'Day 6', desc: 'Beach day and sunset experience.' },
-  { day: 'Day 7', desc: 'Adventure activities or relaxation.' },
-  { day: 'Day 8', desc: 'Island exploration.' },
-  { day: 'Day 9', desc: 'Farewell dinner.' },
-  { day: 'Day 10', desc: 'Departure.' },
+  {
+    day: 'Day 1',
+    title: 'Arrival & Meet Your Crew',
+    desc: 'You\'re officially here. Step out of the airport and switch holiday mode on. From here, you\'re whisked away to your villa, the kind that instantly makes you think, yes, this is exactly what I needed.\n\nWe head straight to Canggu, lively streets, beach-town energy, music in the air. Your first taste of Bali, and it hits just right. Later, join forces with the rest of the group and make way to the world best beach club Finns for a perfect start of your trip.\n\nAs night falls, we start with drinks and make our way through Bali\'s iconic spots: Mexicola, Old Man\'s, Desa Kitsune etc. WanderMesh knows how to do first nights right.',
+    highlights: ['Finns Beach Club evening', 'Bali nightlife at Mexicola, Old Man\'s & Desa Kitsune']
+  },
+  {
+    day: 'Day 2',
+    title: 'Uluwatu Beaches, Temple & Nightlife',
+    desc: 'Wake up, you\'re in paradise, no really you are. Our day begins with a visit to a secluded, pristine beach nestled in the southernmost part of Bali.\n\nLater we\'ll head off to the famous Uluwatu temple. Perched on the edge of a cliff, it offers stunning views of the Indian Ocean. Here we will learn about the Balinese culture and witness the captivating traditional Kecak fire dance show!\n\nLater tonight, gather your squad and head out to Zamna Music Festival at Bali\'s #1 party place Savaya, or hit another local hotspot like La Favela or D Maria to indulge in Bali nightlife one more time!',
+    highlights: ['Uluwatu Temple cliff views', 'Kecak fire dance show', 'Zamna Music Festival at Savaya']
+  },
+  {
+    day: 'Day 3',
+    title: 'Local Exploration or Optional Nusa Penida Trip',
+    desc: 'Give yourself a day to explore local markets, cafe for the perfect Bali vibe. You can hit another popular Day Club i.e. Luna beach Club or La Brisa for a perfect sunset while sipping your favourite cocktails or you can do a optional full day tour to Nusa Penida.\n\nLater in the night you can either head to Savaya for Day 2 of Zamna Music Festival or savour some local cuisine at a local hotspot and keeping it relax and chill.',
+    highlights: ['Local markets + Bali cafés', 'Luna Beach Club or La Brisa sunset', 'Optional Nusa Penida tour']
+  },
+  {
+    day: 'Day 4',
+    title: 'Gili T & Beach Bars',
+    desc: 'Wave goodbye to Canggu as we speedboat our way to Gili Trawangan. An island so small, you can\'t even spot it on a map, and no vehicles here at all!\n\nCheck in to your hotel and begin to explore this tiny paradise on foot. We explore the island on bicycles, sea views, pretty corners, and that slow Gili rhythm you came for.\n\nIn the evening, put on your dancing shoes as we head out to drink responsibly in the incredible bars this tiny island has to offer. Did we say responsibly? Yeah, course. If you want to. This can be as loose or as civilised as you guys want, you are in Gili after all.',
+    highlights: ['Speedboat to Gili Trawangan', 'Island cycling & exploration', 'Sea views & slow island vibes', 'Gili beach bar night']
+  },
+  {
+    day: 'Day 5',
+    title: 'Snorkel & Beach Therapy',
+    desc: 'Today, you\'ve got 24 hours to do what you want! After the breakfast get ready for an under water experience. Go on a snorkelling tour where you will meet turtle and reef while hopping onto other Gilli island i.e. Gilli Meno & Gilli Air.\n\nHead out this evening to enjoy the stunning sunset and an ice-cold cocktail at some of the best beach bars on the island like Pink Coco. You can also enjoy Live Music, Horse Riding or Beach Cinema for a perfect chill out evening.',
+    highlights: ['Snorkelling tour + Gili Meno & Gili Air', 'Sunset cocktails at PinkCoco', 'Live music / Horse riding / Beach cinema']
+  },
+  {
+    day: 'Day 6',
+    title: 'Slow Mornings & Sunset Serenity',
+    desc: 'Sleep in and ease into a slow island morning. Wander down to the beach for a lazy day on the sand, take a dip in the sea, and fully recharge. No rush, just soaking in Gili\'s laid back rhythm before the big night ahead.\n\nAs golden hour melts into the horizon, we gather for the legendary boat party — music up, drinks flowing, dancing like nobody\'s watching under an endless island sky.\n\nWrap the night with a beachside dinner or wander through a buzzing local food market, savoring bold Indonesian flavours and fresh island bites.',
+    highlights: ['Slow Beach Morning', 'Gili Sunset Boat Party', 'Beachside Dinner']
+  },
+  {
+    day: 'Day 7',
+    title: 'Ubud Markets & Balinese Bliss',
+    desc: 'After breakfast, we hop on a ferry to Ubud, Bali\'s cultural heart. Spend the afternoon wandering through its vibrant local markets, browsing handmade crafts, woven bags, silver jewellery, and little treasures tucked into every corner. Take your time, soak in the energy, and maybe pick up a souvenir or two.\n\nAs the day winds down, treat yourself to pure relaxation with a soothing Balinese massage. The perfect way to unwind, reset, and recharge after a day of exploring.',
+    highlights: ['Ferry to Ubud', 'Local markets shopping', 'Balinese massage']
+  },
+  {
+    day: 'Day 8',
+    title: 'ATVs, Coffee Tasting & Day Club',
+    desc: 'Kick off the morning with an adrenaline pumping ATV ride through rugged trails and lush landscapes. Get muddy, get loud, and dive straight into the adventure side of Bali.\n\nAfter the thrill, we slow things down with a Luwak coffee tasting session, learning about the process and sampling one of Bali\'s most unique brews.\n\nLater, we head to an iconic Ubud day club like OMA Bali or Cretya Ubud. Think infinity pools overlooking the jungle, good music, great food, and laid back luxury. If you are up for it, take on the optional Bali swing and soar high above the treetops for that unforgettable view.',
+    highlights: ['ATV ride', 'Luwak coffee tasting', 'OMA Bali or Cretya Ubud day club', 'Optional Bali swing']
+  },
+  {
+    day: 'Day 9',
+    title: 'Mt. Batur Sunrise & Sacred Landscapes',
+    desc: 'The adventure begins early with a 2 AM departure for a sunrise trek up Mount Batur. Reach the summit just in time to watch the sky shift from deep blue to fiery orange, with panoramic views stretching across Bali. After sunrise, continue the experience with a thrilling black lava exploration across the rugged volcanic terrain.\n\nLater in the day, slow the pace as we wander through serene temples and lush rice terraces, soaking in Bali\'s spiritual charm and natural beauty. The perfect balance of adrenaline and tranquility to round off the adventure.',
+    highlights: ['Mt Batur sunrise trek', 'Black lava exploration', 'Temple visits', 'Rice terrace views']
+  },
+  {
+    day: 'Day 10',
+    title: 'One Last Sunrise Together',
+    desc: 'After one last shared breakfast together, we gather to relive the highlights, swap favourite moments, and take those final group photos you will look back on for years. Hugs, laughs, and promises to meet again follow as we say our goodbyes. The journey wraps up with full hearts, new friendships, and memories that will travel home with you long after Bali is behind you.',
+    highlights: ['Final group breakfast', 'Group photos', 'Farewell hugs & memories']
+  },
 ];
 
 const BaliTrip = () => {
@@ -89,14 +139,24 @@ const BaliTrip = () => {
         <div className="trip-detail-section">
           <h2>Itinerary</h2>
           <div className="itinerary-accordion">
-            {itinerary.map((day) => (
-              <div className={`accordion-item ${openDay === day.day ? 'open' : ''}`} key={day.day}>
-                <button className="accordion-trigger" onClick={() => toggleDay(day.day)}>
-                  <span>{day.day}</span>
-                  <span className="accordion-icon">{openDay === day.day ? '−' : '+'}</span>
+            {itinerary.map((item) => (
+              <div className={`accordion-item ${openDay === item.day ? 'open' : ''}`} key={item.day}>
+                <button className="accordion-trigger" onClick={() => toggleDay(item.day)}>
+                  <span>{item.day} - {item.title}</span>
+                  <span className="accordion-icon">{openDay === item.day ? '−' : '+'}</span>
                 </button>
                 <div className="accordion-content">
-                  <p>{day.desc}</p>
+                  <p style={{ whiteSpace: 'pre-wrap' }}>{item.desc}</p>
+                  {item.highlights && (
+                    <div className="accordion-highlights">
+                      <strong>Highlights:</strong>
+                      <ul>
+                        {item.highlights.map((highlight) => (
+                          <li key={highlight}>{highlight}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

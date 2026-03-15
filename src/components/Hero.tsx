@@ -1,43 +1,17 @@
-import { useState, useEffect, useRef } from 'react';
-
-const slides = [
-  { id: 1, src: '/videos/goa wandermesh 2.0 drone.mp4' },
-  { id: 2, src: '/videos/goa wandermesh 2.0 drone.mp4' },
-  { id: 3, src: '/videos/goa wandermesh 2.0 drone.mp4' },
-];
+import React from 'react';
 
 const Hero = () => {
-  const [current, setCurrent] = useState(0);
-  const timerRef = useRef(null);
-
-  const resetTimer = () => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
-  };
-
-  useEffect(() => {
-    resetTimer();
-    return () => clearInterval(timerRef.current);
-  }, []);
-
   const scrollToExperiences = () => {
     document.getElementById('upcoming-experiences')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section className="hero">
-      {slides.map((slide, i) => (
-        <div
-          key={slide.id}
-          className={`hero-video-slide ${i === current ? 'active' : ''}`}
-        >
-          <video muted autoPlay loop playsInline className="hero-video">
-            <source src={slide.src} type="video/mp4" />
-          </video>
-        </div>
-      ))}
+      <div className="hero-video-slide active">
+        <video muted autoPlay loop playsInline className="hero-video">
+          <source src="/videos/Drone-shot.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div className="hero-overlay" />
       <div className="hero-content">
         <h1>Where Luxury Meets Solo Exploration</h1>
@@ -47,16 +21,6 @@ const Hero = () => {
         <button className="btn-primary" onClick={scrollToExperiences}>
           View Experiences
         </button>
-      </div>
-      <div className="hero-dots">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            className={`hero-dot ${i === current ? 'active' : ''}`}
-            onClick={() => { setCurrent(i); resetTimer(); }}
-            aria-label={`Slide ${i + 1}`}
-          />
-        ))}
       </div>
     </section>
   );
