@@ -1,4 +1,14 @@
-const images = Array.from({ length: 9 }, (_, i) => `/images/${i + 1}.png`);
+const images = [
+  '/images/1.JPG',
+  '/images/2.JPG',
+  '/images/3.JPG',
+  '/images/4.JPG',
+  '/images/5.jpg',
+  '/images/6.jpg',
+  '/images/7.jpg',
+  '/images/8.jpg',
+  '/images/9.jpg',
+];
 
 const GallerySection = () => {
   // Distribute images into 3 rows

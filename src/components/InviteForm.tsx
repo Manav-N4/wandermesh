@@ -2,7 +2,7 @@ import { useState, FormEvent } from 'react';
 import { useInviteModal } from '../context/InviteModalContext';
 
 const InviteForm = () => {
-  const { isOpen, closeModal } = useInviteModal();
+  const { isOpen, closeModal, openModal } = useInviteModal();
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
@@ -21,6 +21,9 @@ const InviteForm = () => {
           <p className="section-label">Request Your Invite</p>
           <div className="invite-tagline-wrapper">
             <p className="invite-tagline">Kickstart your next escape with us. Claim your exclusive invite today.</p>
+            <button className="btn btn-primary" onClick={openModal}>
+              Request Your Invite
+            </button>
           </div>
         </div>
       </section>

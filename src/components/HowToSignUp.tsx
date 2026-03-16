@@ -1,3 +1,5 @@
+import { useInviteModal } from '../context/InviteModalContext';
+
 const steps = [
   {
     number: 1,
@@ -51,32 +53,41 @@ const IconCommunity = () => (
 
 const icons = [IconForm, IconConversation, IconCommunity];
 
-const HowToSignUp = () => (
-  <section className="signup-steps-section">
-    <div className="container">
-      <div className="signup-header">
-        <p className="section-label">How to Join a WanderMesh Experience</p>
-      </div>
-      <div className="steps-pathway">
-        {steps.map((step, idx) => {
-          const IconComponent = icons[idx];
-          return (
-            <div key={step.number}>
-              <div className="step-card">
-                <div className="step-label">{step.label}</div>
-                <div className="step-icon-wrapper">
-                  <IconComponent />
+const HowToSignUp = () => {
+  const { openModal } = useInviteModal();
+
+  return (
+    <section className="signup-steps-section">
+      <div className="container">
+        <div className="signup-header">
+          <p className="section-label">How to Join a WanderMesh Experience</p>
+        </div>
+        <div className="steps-pathway">
+          {steps.map((step, idx) => {
+            const IconComponent = icons[idx];
+            return (
+              <div key={step.number}>
+                <div className="step-card">
+                  <div className="step-label">{step.label}</div>
+                  <div className="step-icon-wrapper">
+                    <IconComponent />
+                  </div>
+                  <h4 className="step-title">{step.title}</h4>
+                  <p className="step-desc">{step.description}</p>
                 </div>
-                <h4 className="step-title">{step.title}</h4>
-                <p className="step-desc">{step.description}</p>
+                {idx < steps.length - 1 && <div className="step-connector"></div>}
               </div>
-              {idx < steps.length - 1 && <div className="step-connector"></div>}
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <div className="signup-cta">
+          <button className="btn btn-primary" onClick={openModal}>
+            Request Your Invite
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default HowToSignUp;

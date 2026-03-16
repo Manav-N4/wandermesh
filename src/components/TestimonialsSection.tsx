@@ -1,35 +1,54 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const testimonials = [
   {
-    type: 'image',
-    quote: "I've done group tours before, and they always felt rushed. With WanderMesh, I got a flexible plan that gave me freedom to stay longer in places I loved. I ended up spending two extra days in Ubud just because it felt right — no extra calls, no penalties, just pure freedom.",
-    author: 'Ananya R., 25 – Bangalore',
+    type: 'video',
+    quote: "I joined my first solo trip through WanderMesh thinking I'd mostly be on my own, but within hours it felt like a small community. From beachside sundowners to celebrating a new friend's birthday, the entire experience felt magical.",
+    author: '~ Richa',
+    videoUrl: '/videos/richa-testimonial.mp4',
   },
   {
     type: 'video',
-    quote: "Most travel companies give you a printed schedule and expect you to stick to it. WanderMesh was different. I could swap activities on the go and explore hidden spots locals suggested. It felt like the trip was built around me, not the other way around.",
-    author: 'Nisha D., 22 – Delhi',
-  },
-  {
-    type: 'image',
-    quote: "WanderMesh matched me with a trip vibe that was exactly what I wanted — chill mornings, adventure in the afternoon, and social evenings. It didn't feel like a package tour at all. I met other travelers who were on the same wavelength, and that made all the difference.",
-    author: 'Rohan K., 28 – Pune',
+    quote: "What started as my first solo trip with WanderMesh quickly turned into a trip with friends. Between the luxury villa stays, the yacht party, and exploring Goa together, every moment felt special.",
+    author: '~ Vandana',
+    videoUrl: '/videos/vandana-testimonial.mp4',
   },
   {
     type: 'video',
-    quote: "What stood out for me was how connected I felt — not just to the place, but to the people. From local meetups to expert chat groups, I was never alone, even while traveling solo. That sense of community is something I've never experienced with other platforms.",
-    author: 'Aarav M., 31 – Mumbai',
+    quote: "As a solo female traveler, feeling safe matters a lot. With WanderMesh I could simply enjoy the journey. Watching the sunset during a sundowner in the dunes and sharing the experience with people who quickly became friends was truly special.",
+    author: '~ Hitakshi',
+    videoUrl: '/videos/hitakshi-testimonial.mp4',
+  },
+  {
+    type: 'video',
+    quote: "Sometimes we still talk about the Goa trip and wonder how it all happened in just a few days. Beautiful villas, sunset DJ parties, kayaking, scooty rides, and a yacht party that felt straight out of a movie.",
+    author: '~ Chakit & Shikha',
+    videoUrl: '/videos/chakit-shikha-testimonial.mp4',
+  },
+  {
+    type: 'video',
+    quote: "I almost overthought my way out of booking the trip, but my first solo experience with WanderMesh turned out to be incredible. From kayaking and beach hopping to spa time and a sunset yacht party, it completely changed how I see solo travel.",
+    author: '~ Simran',
+    videoUrl: '/videos/simran-testimonial.mp4',
   },
 ];
 
 const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
+  const videoRef = useRef(null);
 
   const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
 
   const t = testimonials[current];
+
+  // Pause video when testimonial changes
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }, [current]);
 
   return (
     <section className="testimonials-section">
@@ -49,8 +68,27 @@ const TestimonialsSection = () => {
                   </div>
                 ) : (
                   <div className="testimonial-reel-placeholder">
-                    <span className="reel-play-icon">▶</span>
-                    <p>Video Testimonial</p>
+                    {t.videoUrl ? (
+                      <video
+                        key={`video-${current}`}
+                        ref={videoRef}
+                        width="100%"
+                        height="100%"
+                        controls
+                        autoPlay
+                        muted
+                        loop
+                        style={{ borderRadius: '12px', objectFit: 'cover' }}
+                      >
+                        <source src={t.videoUrl} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <>
+                        <span className="reel-play-icon">▶</span>
+                        <p>Video Testimonial</p>
+                      </>
+                    )}
                   </div>
                 )}
               </div>

@@ -89,10 +89,6 @@ const BaliTrip = () => {
 
   return (
     <div className="trip-page">
-      <div className="trip-hero-banner">
-        <img src="/images/bali.jpg" alt="Bali" className="trip-hero-img" />
-        <div className="trip-hero-overlay" />
-      </div>
 
       <div className="container">
         <Link to="/" className="trip-back">← Back to Home</Link>
@@ -105,6 +101,11 @@ const BaliTrip = () => {
             <span>Bali</span>
           </div>
         </div>
+
+        <div className="trip-hero-banner">
+        <img src="/images/bali.jpg" alt="Bali" className="trip-hero-img" />
+        <div className="trip-hero-overlay" />
+      </div>
 
         <div className="trip-detail-section">
           <h2>Trip Details</h2>
