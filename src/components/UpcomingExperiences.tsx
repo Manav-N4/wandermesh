@@ -19,6 +19,15 @@ const experiences = [
     description: 'Join us for a tropical retreat in Bali. Wander through emerald rice terraces, breathe in the ocean breeze, explore vibrant markets, and watch the sky blush pink at sunset. Whether you seek adventure or stillness, this escape lets you move freely and discover your rhythm.',
     link: '/upcoming-loops/bali-uncharted',
   },
+  {
+    image: '/images/bali.jpg',
+    title: 'BLR Breakaway',
+    date: '📅 Mar 29 - Mar 30',
+    price: 'INR 4,999',
+    location: 'Bangalore',
+    description: 'Step out of the city chaos and into a refreshing day curated for connection, nature, and good vibes. BLR Breakaway is a one-day WanderMesh experience where like-minded strangers come together to unwind, explore, and create memories, just a short drive from Bangalore.',
+    link: '/upcoming-loops/blr-breakaway',
+  },
 ];
 
 const UpcomingExperiences = () => (
