@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const MeetSection = () => (
   <section className="meet-section">
-    <div className="meet-bg" style={{ backgroundImage: 'url(/images/about-placeholder.jpg)' }} />
+    <div className="meet-bg" style={{ backgroundImage: 'url(/images/hero.jpg)' }} />
     <div className="meet-overlay" />
     <div className="container meet-content-wrapper">
       <p className="section-label" style={{ color: '#fff' }}>Meet WanderMesh</p>

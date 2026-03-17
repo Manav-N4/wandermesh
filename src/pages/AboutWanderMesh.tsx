@@ -25,15 +25,16 @@ const features = [
 
 const AboutWanderMesh = () => (
   <div className="about-page">
-    <div className="about-hero-banner">
-      <div className="about-hero-bg" style={{ backgroundImage: 'url(/images/about-placeholder.jpg)' }} />
-      <div className="about-hero-overlay" />
-      <div className="about-hero-content">
-        <h1>What Makes WanderMesh Different</h1>
-      </div>
-    </div>
+    
     <div className="container">
       <Link to="/" className="trip-back">← Back to Home</Link>
+      <div className="about-hero-banner">
+      <div className="about-hero-bg" style={{ backgroundImage: 'url(/images/hero.jpg)' }} />
+      <div className="about-hero-overlay" />
+      <div className="about-hero-content">
+        <h1>What Makes WanderMesh Different?</h1>
+      </div>
+    </div>
       <div className="about-features-grid">
         {features.map((f) => (
           <div className="about-feature-card" key={f.title}>
