@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import VietnamTrip from "./pages/VietnamTrip";
 import BaliTrip from "./pages/BaliTrip";
+import BLRBreakaway from "./pages/BLRBreakaway";
 import AboutWanderMesh from "./pages/AboutWanderMesh";
 import NotFound from "./pages/NotFound";
 
