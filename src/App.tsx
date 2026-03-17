@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import VietnamTrip from "./pages/VietnamTrip";
 import BaliTrip from "./pages/BaliTrip";
+import BLRBreakaway from "./pages/BLRBreakaway";
 import AboutWanderMesh from "./pages/AboutWanderMesh";
 import NotFound from "./pages/NotFound";
 
@@ -16,6 +17,7 @@ const App = () => (
         <Route path="/" element={<Index />} />
         <Route path="/upcoming-loops/vibing-in-vietnam" element={<VietnamTrip />} />
         <Route path="/upcoming-loops/bali-uncharted" element={<BaliTrip />} />
+        <Route path="/upcoming-loops/blr-breakaway" element={<BLRBreakaway />} />
         <Route path="/about-wandermesh" element={<AboutWanderMesh />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
