@@ -52,7 +52,7 @@ const BLRBreakaway = () => {
         </div>
 
         <div className="trip-hero-banner">
-          <img src="/images/bali.jpg" alt="BLR Breakaway" className="trip-hero-img" />
+          <img src="/images/blr.jpeg" alt="BLR Breakaway" className="trip-hero-img" />
           <div className="trip-hero-overlay" />
         </div>
 

@@ -20,7 +20,7 @@ const experiences = [
     link: '/upcoming-loops/bali-uncharted',
   },
   {
-    image: '/images/bali.jpg',
+    image: '/images/blr.jpeg',
     title: 'BLR Breakaway',
     date: '📅 Mar 29 - Mar 30',
     price: 'INR 4,999',
