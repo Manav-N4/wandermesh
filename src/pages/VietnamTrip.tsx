@@ -129,11 +129,14 @@ const VietnamTrip = () => {
                 ))}
               </div>
             ) : (
-              <ul className="exclusion-list">
+              <div className="inclusions-grid">
                 {exclusions.map((item) => (
-                  <li key={item}>{item}</li>
+                  <div className="inclusion-item" key={item.title}>
+                    <h4>{item.title}</h4>
+                    <p>{item.desc}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
             )}
           </div>
         </div>
