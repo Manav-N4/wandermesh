@@ -2,20 +2,21 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const inclusions = [
-  { title: 'Accommodation', desc: '9 nights at 3/4 star hotels on a twin sharing basis. Sharing with same Gender for solo travellers' },
-  { title: 'Meals', desc: '9 breakfasts + 1 Lunch' },
-  { title: 'Transfers', desc: 'Intercity transfers between hotels/ferry terminals and all internal flights. ' },
-  { title: 'Activities', desc: 'Guided cultural and nature experiences.' },
+  { title: 'Accommodation', desc: '9 nights at 3/4 star hotels on a twin sharing basis.' },
+  { title: 'Meals', desc: '9 breakfasts.' },
+  { title: 'Transfers', desc: 'Intercity transfers between hotels/ferry terminals. Ferry from Bali to Gili Trawangan & Return.' },
+  { title: 'Activities', desc: 'ATV tour in Ubud along different landscapes • Visit to Traditional homes and coffee plantations • Coffee tasting and get a chance to try the famous Kopi Luwak • Mount Batur volcano by 4WD Jeep Tour and black lava fields • Nightlife experience in Gili and Seminyak • 3 island Snorkelling trip from Gili Trawangan • Boat Party in Gili Trawangan.' },
+  { title: 'Trip Support', desc: 'Assistance from our expert travel consultants throughout the trip / trip buddy. A lot of friends, memories, and adventures!' },
 ];
 
 const exclusions = [
-  'Airfares',
-  'Visas',
-  'Meals not mentioned',
-  'Airport transfers not included',
-  'Optional activities including Zamna Music Festival pass',
-  'Taxes if applicable',
-  'Personal expenses and weather related itinerary adjustments',
+  { title: 'Airfares', desc: 'We can guide you with flight bookings.' },
+  { title: 'Visas', desc: 'Currently visa is on arrival and costs about 3k INR for Indians.' },
+  { title: 'Meals', desc: 'Any meals not mentioned in "inclusion section" (We would like you to explore the local cuisine and if you are a vegetarian not to worry we suggest options for you.)' },
+  { title: 'Airport Transfers', desc: 'Pick up and drop off at Denpasar airport (at additional cost based on your flight timings).' },
+  { title: 'Optional Activities', desc: 'Day Trip to Nusa Penida or any other activities not mentioned in "inclusions". Pass to Zamna Music Festival.' },
+  { title: 'Tax', desc: '5% TCS (Refundable as per ITR) + 5% GST.' },
+  { title: 'Other', desc: 'Personal Expenses and anything not specifically mentioned under "inclusions". All activities mentioned in the itinerary are subject to weather conditions and sea tides.' },
 ];
 
 const itinerary = [

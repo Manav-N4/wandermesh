@@ -2,20 +2,21 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const inclusions = [
-  { title: 'Accommodation', desc: 'Carefully selected boutique hotels and premium stays throughout the trip.' },
-  { title: 'Meals', desc: 'Selected breakfasts and curated local dining experiences.' },
-  { title: 'Transfers', desc: 'All internal transportation including private transfers and intercity travel.' },
-  { title: 'Activities', desc: 'Guided excursions, curated local experiences, and cultural exploration activities.' },
+  { title: 'Accommodation', desc: '9 nights at 3/4 star hotels on a twin sharing basis. Sharing with same Gender for solo travellers.' },
+  { title: 'Meals', desc: '9 breakfasts + 1 Lunch.' },
+  { title: 'Transfers', desc: 'Intercity transfers between hotels/ferry terminals and all internal flights.' },
+  { title: 'Activities', desc: 'Halong Bay Cruise • Fansipan Peak Visit in Mono Rail and Cable Car • Cat Cat Village & Mona Cafe • Ba Na Hills Visit • Nightlife experience in Hanoi & Da Nang • Mangrove Forest and Round Basket Boat • Pub Crawl on Beer Street Ticket in Hanoi • Marble Mountain • Golden Hand Bridge • Lantern Boat in Hoi An • Kayaking.' },
+  { title: 'Trip Support', desc: 'Assistance from our expert travel consultants throughout the trip / trip buddy. A lot of friends, memories, and adventures!' },
 ];
 
 const exclusions = [
-  'International flights are not included',
-  'Visa fees and processing',
-  'Meals not mentioned in inclusions',
-  'Arrival or departure transfers not specified',
-  'Additional experiences outside the itinerary',
-  'Applicable taxes if required',
-  'Personal expenses such as shopping, additional meals, and weather related itinerary changes',
+  { title: 'Airfares', desc: 'We can guide you with flight bookings.' },
+  { title: 'Visas', desc: 'Currently visa costs about 2.5k INR for Indians and need to be filed at least a week before the travel date.' },
+  { title: 'Meals', desc: 'Any meals not mentioned in "inclusion section" (We would like you to explore the local cuisine and if you are a vegetarian not to worry we suggest options for you.)' },
+  { title: 'Airport Transfers', desc: 'Pick up and drop off at Noi Bai, Hanoi & Da Nang Airport (at additional cost based on your flight timings).' },
+  { title: 'Optional Activities', desc: 'Day Trip to Ninh Binh or any other activities not mentioned in "inclusions".' },
+  { title: 'Tax', desc: '5% TCS (Refundable as per ITR) + 5% GST.' },
+  { title: 'Other', desc: 'Personal Expenses and anything not specifically mentioned under "inclusions". All activities mentioned in the itinerary are subject to weather conditions and sea tides.' },
 ];
 
 const itinerary = [
