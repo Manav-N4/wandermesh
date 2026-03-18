@@ -124,7 +124,7 @@ const BaliTrip = () => {
                 {inclusions.map((item) => (
                   <div className="inclusion-item" key={item.title}>
                     <h4>{item.title}</h4>
-                    <p>{item.desc}</p>
+                    <p style={{ whiteSpace: 'pre-wrap' }}>{item.desc}</p>
                   </div>
                 ))}
               </div>
