@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const inclusions = [
-  { title: 'Accommodation', desc: 'Boutique stays and curated villas.' },
-  { title: 'Meals', desc: 'Selected breakfasts and local dining experiences.' },
-  { title: 'Transfers', desc: 'Private transport between destinations.' },
+  { title: 'Accommodation', desc: '9 nights at 3/4 star hotels on a twin sharing basis. Sharing with same Gender for solo travellers' },
+  { title: 'Meals', desc: '9 breakfasts + 1 Lunch' },
+  { title: 'Transfers', desc: 'Intercity transfers between hotels/ferry terminals and all internal flights. ' },
   { title: 'Activities', desc: 'Guided cultural and nature experiences.' },
 ];
 
@@ -97,8 +97,8 @@ const BaliTrip = () => {
           <h1>Bali Uncharted</h1>
           <div className="trip-meta">
             <span>📅 May 1 - May 10</span>
-            <span>INR 56,999</span>
-            <span>Bali</span>
+            <span>9 NIGHTS / 10 DAYS</span>
+            <span><b>Price: INR 56,999</b></span>
           </div>
         </div>
 

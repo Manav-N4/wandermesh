@@ -46,8 +46,8 @@ const BLRBreakaway = () => {
           <h1>BLR Breakaway</h1>
           <div className="trip-meta">
             <span>📅 Mar 29 - Mar 30</span>
-            <span>INR 4,999</span>
-            <span>Bangalore</span>
+            <span>1 NIGHT / 2 DAYS</span>
+            <span><b>Price: INR 4,999</b></span>
           </div>
         </div>
 

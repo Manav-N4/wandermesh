@@ -97,8 +97,8 @@ const VietnamTrip = () => {
           <h1>Vibing in Vietnam</h1>
           <div className="trip-meta">
             <span>📅 Apr 24 - May 3</span>
-            <span>INR 59,999</span>
-            <span>Vietnam</span>
+            <span>9 NIGHTS / 10 DAYS</span>
+            <span><b>Price: INR 59,999</b></span>
           </div>
         </div>
 

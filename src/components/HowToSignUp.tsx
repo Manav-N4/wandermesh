@@ -60,7 +60,7 @@ const HowToSignUp = () => {
     <section className="signup-steps-section">
       <div className="container">
         <div className="signup-header">
-          <p className="section-label">How to Join a WanderMesh Experience</p>
+          <p className="section-label">How to Join a WanderMesh Experience?</p>
         </div>
         <div className="steps-pathway">
           {steps.map((step, idx) => {

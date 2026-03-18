@@ -72,8 +72,8 @@ const TestimonialsSection = () => {
                       <video
                         key={`video-${current}`}
                         ref={videoRef}
-                        width="100%"
-                        height="100%"
+                        width="120%"
+                        height="120%"
                         controls
                         autoPlay
                         muted

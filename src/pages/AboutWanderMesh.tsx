@@ -25,16 +25,28 @@ const features = [
 
 const AboutWanderMesh = () => (
   <div className="about-page">
-    
     <div className="container">
       <Link to="/" className="trip-back">← Back to Home</Link>
-      <div className="about-hero-banner">
-      <div className="about-hero-bg" style={{ backgroundImage: 'url(/images/hero.jpg)' }} />
-      <div className="about-hero-overlay" />
-      <div className="about-hero-content">
-        <h1>What Makes WanderMesh Different?</h1>
+      
+      {/* Meet WanderMesh Section */}
+      <div className="about-meet-section">
+        <p className="section-label">Meet WanderMesh</p>
+        <div className="about-meet-intro">
+          <p>
+            WanderMesh is a curated travel collective bringing together explorers, creators, founders, and curious minds who want more than just destinations. Our journeys are designed to spark conversations, friendships, and experiences that stay with you long after the trip ends.
+          </p>
+        </div>
       </div>
-    </div>
+
+      {/* What Makes WanderMesh Different */}
+      <div className="about-hero-banner">
+        <div className="about-hero-bg" style={{ backgroundImage: 'url(/images/hero.jpg)' }} />
+        <div className="about-hero-overlay" />
+        <div className="about-hero-content">
+          <h1>What Makes WanderMesh Different?</h1>
+        </div>
+      </div>
+      
       <div className="about-features-grid">
         {features.map((f) => (
           <div className="about-feature-card" key={f.title}>
