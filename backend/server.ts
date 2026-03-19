@@ -4,7 +4,14 @@ import { supabase } from "./supabase.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173", // local dev
+    "https://wander-mesh-replica.vercel.app" // your frontend
+  ],
+  methods: ["GET", "POST"],
+}));
+app.options('*', cors());
 app.use(express.json());
 
 app.post("/submit", async (req, res) => {
