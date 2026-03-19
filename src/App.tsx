@@ -8,11 +8,13 @@ import BaliTrip from "./pages/BaliTrip";
 import BLRBreakaway from "./pages/BLRBreakaway";
 import AboutWanderMesh from "./pages/AboutWanderMesh";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => (
   <BrowserRouter>
     <InviteModalProvider>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/upcoming-loops/vibing-in-vietnam" element={<VietnamTrip />} />
