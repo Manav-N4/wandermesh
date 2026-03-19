@@ -1,9 +1,11 @@
 import { useState, FormEvent } from 'react';
 import { useInviteModal } from '../context/InviteModalContext';
+import { supabase } from "../lib/supabase";
 
 const InviteForm = () => {
   const { isOpen, closeModal } = useInviteModal();
   const [submitted, setSubmitted] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     gender: '',
@@ -15,7 +17,7 @@ const InviteForm = () => {
     excitement: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -24,52 +26,34 @@ const InviteForm = () => {
   };
 
   const handleSubmit = async (e: FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  console.log("Submitting:", formData); // debug
+    try {
+      const { error } = await supabase.from("leads").insert([
+        {
+          name: formData.name,
+          gender: formData.gender,
+          phone: formData.phone,
+          insta_id: formData.instagram,
+          trip: formData.experience,
+          why_join: formData.excitement,
+          occupation: formData.profession,
+        }
+      ]);
 
-  try {
-    const res = await fetch("https://wander-mesh-replica-production.up.railway.app/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        gender: formData.gender,
-        phone: formData.phone,
-        instaId: formData.instagram,
-        trip: formData.experience,
-        whyJoin: formData.excitement,
-        occupation: formData.profession,
-      }),
-    });
+      if (error) throw error;
 
-    const result = await res.json();
-    console.log("Response:", result);
+      setSubmitted(true);
 
-    // show success UI ONLY after success
-    setSubmitted(true);
+      setTimeout(() => {
+        closeModal();
+        setSubmitted(false);
+      }, 2000);
 
-    setTimeout(() => {
-      closeModal();
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        gender: '',
-        age: '',
-        phone: '',
-        instagram: '',
-        profession: '',
-        experience: '',
-        excitement: '',
-      });
-    }, 2000);
-
-  } catch (err) {
-    console.error("Error submitting form:", err);
-  }
-};
+    } catch (err) {
+      console.error("Error:", err);
+    }
+  };
 
   return (
     <>
