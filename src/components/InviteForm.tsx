@@ -29,7 +29,7 @@ const InviteForm = () => {
   console.log("Submitting:", formData); // debug
 
   try {
-    const res = await fetch("http://localhost:3000/submit", {
+    const res = await fetch("https://wander-mesh-replica-production.up.railway.app/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

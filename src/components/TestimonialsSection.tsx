@@ -4,31 +4,31 @@ const testimonials = [
   {
     type: 'video',
     quote: "I joined my first solo trip through WanderMesh thinking I'd mostly be on my own, but within hours it felt like a small community. From beachside sundowners to celebrating a new friend's birthday, the entire experience felt magical.",
-    author: '~ Richa',
+    author: '~ Richa, Mumbai',
     videoUrl: '/videos/richa-testimonial.mp4',
   },
   {
     type: 'video',
     quote: "What started as my first solo trip with WanderMesh quickly turned into a trip with friends. Between the luxury villa stays, the yacht party, and exploring Goa together, every moment felt special.",
-    author: '~ Vandana',
+    author: '~ Vandana, Bangalore',
     videoUrl: '/videos/vandana-testimonial.mp4',
   },
   {
     type: 'video',
     quote: "As a solo female traveler, feeling safe matters a lot. With WanderMesh I could simply enjoy the journey. Watching the sunset during a sundowner in the dunes and sharing the experience with people who quickly became friends was truly special.",
-    author: '~ Hitakshi',
+    author: '~ Hitakshi, Delhi',
     videoUrl: '/videos/hitakshi-testimonial.mp4',
   },
   {
     type: 'video',
     quote: "Sometimes we still talk about the Goa trip and wonder how it all happened in just a few days. Beautiful villas, sunset DJ parties, kayaking, scooty rides, and a yacht party that felt straight out of a movie.",
-    author: '~ Chakit & Shikha',
+    author: '~ Chakit & Shikha, Mumbai',
     videoUrl: '/videos/chakit-shikha-testimonial.mp4',
   },
   {
     type: 'video',
     quote: "I almost overthought my way out of booking the trip, but my first solo experience with WanderMesh turned out to be incredible. From kayaking and beach hopping to spa time and a sunset yacht party, it completely changed how I see solo travel.",
-    author: '~ Simran',
+    author: '~ Simran, Bangalore',
     videoUrl: '/videos/simran-testimonial.mp4',
   },
 ];
@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
                         style={{ borderRadius: '12px', objectFit: 'cover' }}
                       >
                         <source src={t.videoUrl} type="video/mp4" />
-                        Your browser does not support the video tag.
+                        Your browser does not support the video.
                       </video>
                     ) : (
                       <>
