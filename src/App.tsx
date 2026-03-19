@@ -9,6 +9,7 @@ import BLRBreakaway from "./pages/BLRBreakaway";
 import AboutWanderMesh from "./pages/AboutWanderMesh";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import InviteForm from "./components/InviteForm";
 
 const App = () => (
   <BrowserRouter>
@@ -24,6 +25,7 @@ const App = () => (
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <InviteForm />
     </InviteModalProvider>
   </BrowserRouter>
 );
