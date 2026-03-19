@@ -20,7 +20,7 @@
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   --card-radius: 20px;
   --container-max: 1100px;
-  --section-spacing: 64px;
+  --section-spacing: 40px;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, sans-serif;
 }
@@ -563,7 +563,7 @@ ul {
 
 .about-belief-section {
   text-align: center;
-  padding: 40px 0 60px;
+  padding: 20px 0 30px;
 }
 
 .about-belief-lead {
@@ -590,12 +590,12 @@ ul {
 
 .about-vision-section {
   text-align: center;
-  padding: 40px 0 20px;
+  padding: 20px 0 10px;
 }
 
 .about-hero-banner {
   position: relative;
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden;
   margin-top: 0;
   background: #fff;
@@ -1676,7 +1676,7 @@ ul {
 
 @media (max-width: 640px) {
   :root {
-    --section-spacing: 64px;
+    --section-spacing: 32px;
   }
 
   .container {
