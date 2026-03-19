@@ -97,7 +97,7 @@ const VietnamTrip = () => {
         <div className="trip-header-info">
           <h1>Vibing in Vietnam</h1>
           <div className="trip-meta">
-            <span>📅 Apr 24 - May 3</span>
+            <span>📅 Jun 5 - Jun 14</span>
             <span>9 NIGHTS / 10 DAYS</span>
             <span><b>Price: INR 59,999</b></span>
           </div>

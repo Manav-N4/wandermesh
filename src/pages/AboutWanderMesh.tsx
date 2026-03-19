@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 const standFor = [
   {
-    title: 'Experiences > Itineraries',
+    title: 'Experiences over Itineraries',
     text: 'We give you structure where needed—and freedom where it matters.',
   },
   {
-    title: 'Strangers → Tribe',
+    title: 'Strangers to Tribe',
     text: 'Come solo. Leave with people who feel like your own.',
   },
   {
@@ -52,8 +52,8 @@ const AboutWanderMesh = () => (
         <p className="section-label">About WanderMesh</p>
         <div className="about-meet-intro">
           <p>
-            WanderMesh is a global community of solo travelers who choose experiences over itineraries—where every journey is shaped by people, spontaneity, and moments you can’t plan. <br></br>
-            We started with a simple belief: Travel isn’t about ticking destinations off a list.<br></br>
+            WanderMesh is a global community of solo travelers who choose experiences over itineraries—where every journey is shaped by people, spontaneity, and moments you can’t plan.
+            We started with a simple belief: Travel isn’t about ticking destinations off a list.
             It’s about who you meet, what you feel, and how you change along the way.
           </p>
         </div>
@@ -62,7 +62,7 @@ const AboutWanderMesh = () => (
       {/* What We Stand For */}
       <div className="about-hero-banner">
         <div className="about-hero-content">
-          <h1>What We Stand For</h1>
+          <h1>What We Stand For?</h1>
         </div>
       </div>
 
@@ -78,7 +78,7 @@ const AboutWanderMesh = () => (
       {/* What Makes WanderMesh Different */}
       <div className="about-hero-banner">
         <div className="about-hero-content">
-          <h1>What Makes WanderMesh Different</h1>
+          <h1>What Makes WanderMesh Different?</h1>
         </div>
       </div>
 

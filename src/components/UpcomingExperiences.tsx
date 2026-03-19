@@ -4,7 +4,7 @@ const experiences = [
   {
     image: '/images/vietnam.jpg',
     title: 'Vibing in Vietnam',
-    date: '📅 Apr 24 - May 3',
+    date: '📅 Jun 5 - Jun 14',
     price: 'INR 59,999',
     duration: '9 NIGHTS / 10 DAYS',
     description: 'Join us for a coastal retreat in Vietnam. Cruise between emerald karsts, breathe in the salty breeze, discover lantern-lit alleys, and watch the riverfront glow gold at twilight. Whether craving thrill or calm, this journey helps you set your pace and embrace your rhythm.',
