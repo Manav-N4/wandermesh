@@ -1,25 +1,44 @@
 import { Link } from 'react-router-dom';
 
-const features = [
+const standFor = [
+  {
+    title: 'Experiences > Itineraries',
+    text: 'We give you structure where needed—and freedom where it matters.',
+  },
+  {
+    title: 'Strangers → Tribe',
+    text: 'Come solo. Leave with people who feel like your own.',
+  },
+  {
+    title: 'Curated, Not Crowded',
+    text: 'No chaos. No tourist rush. Just the right people, in the right setting.',
+  },
+  {
+    title: 'Freedom to Choose',
+    text: 'Your pace. Your vibe. Your journey.\n\nWe design the framework—you make it yours.',
+  },
+];
+
+const different = [
   {
     title: 'Exclusive Access',
-    text: 'The best experiences are rarely public. Our community unlocks private villas, invite only gatherings, creator collaborations, and hidden locations that never appear on booking platforms. These are moments reserved for a select circle and shared with intention. When access is limited and curated, every experience feels special, meaningful, and impossible to replicate.',
+    text: 'WanderMesh is intentionally selective.\n\nEvery experience is built around a curated group of like-minded people—so the energy, conversations, and connections just click.',
   },
   {
-    title: 'Experiences Over Itineraries',
-    text: 'We do not build generic itineraries or checklist tours. We craft immersive moments shaped by place, people, and mood. From desert rituals under open skies to private villas, cultural deep dives, and off menu adventures, every detail is designed to feel rare and personal. You return with stories, not souvenirs, and memories that stay long after the journey ends.',
+    title: 'Premium Stays',
+    text: 'Where you stay is part of the experience.\n\nWe handpick spaces that feel as good as the trip itself—thoughtful, aesthetic, and immersive.',
   },
   {
-    title: 'Build Your Trip, Your Way',
-    text: 'We give you the base and you choose the toppings. Start with a solid plan that covers stays, transport, and core experiences, then layer on what excites you most. Add a trek, a food crawl, a yacht evening, or keep it slow and simple. You only pay for what you want, never what you do not need. Flexible by design, every journey adapts to your pace, your budget, and your vibe.',
+    title: 'Unforgettable Experiences',
+    text: 'Not checklists. Not tourist stops.\n\nJust moments you\'ll talk about long after the trip ends.',
   },
   {
-    title: 'Safety First, Always',
-    text: 'True luxury begins with peace of mind. Every stay is verified, every partner is trusted, and every experience is supported by careful planning on the ground. Secure rooms, dependable transport, and dedicated trip captains ensure you always feel looked after. You explore freely and confidently, knowing comfort and safety travel with you at every step.',
+    title: 'Effortless Networking',
+    text: 'No name tags. No awkward intros.\n\nJust real conversations with creators, founders, and curious minds—in the right setting.',
   },
   {
-    title: 'Community Over Crowd',
-    text: 'Where you go matters, but who you travel with defines everything. WanderMesh brings together creators, founders, artists, and curious explorers who naturally connect and share the same energy. Small groups keep it intimate, conversations flow easily, and friendships form without effort. It never feels crowded or chaotic, only warm, personal, and deeply memorable.',
+    title: 'Growth, Without the Pressure',
+    text: 'It\'s not a workshop—but you\'ll still learn.\n\nFrom intimate sessions with creators to curated experiences like mixology and culinary workshops, growth happens naturally along the way.',
   },
 ];
 
@@ -27,31 +46,67 @@ const AboutWanderMesh = () => (
   <div className="about-page">
     <div className="container">
       <Link to="/" className="trip-back">← Back to Home</Link>
-      
-      {/* Meet WanderMesh Section */}
+
+      {/* About WanderMesh intro */}
       <div className="about-meet-section">
-        <p className="section-label">Meet WanderMesh</p>
+        <p className="section-label">About WanderMesh</p>
         <div className="about-meet-intro">
           <p>
-            WanderMesh is a curated travel collective bringing together explorers, creators, founders, and curious minds who want more than just destinations. Our journeys are designed to spark conversations, friendships, and experiences that stay with you long after the trip ends.
+            WanderMesh is a global community of solo travelers who choose experiences over itineraries—where every journey is shaped by people, spontaneity, and moments you can't plan.
           </p>
         </div>
       </div>
 
-      {/* What Makes WanderMesh Different */}
-      <div className="about-hero-banner">
-        <div className="about-hero-bg" style={{ backgroundImage: 'url(/images/hero.jpg)' }} />
-        <div className="about-hero-overlay" />
-        <div className="about-hero-content">
-          <h1>What Makes WanderMesh Different?</h1>
+      {/* Belief */}
+      <div className="about-belief-section">
+        <p className="about-belief-lead">We started with a simple belief:</p>
+        <p className="about-belief-quote">Travel isn't about ticking destinations off a list.</p>
+        <p className="about-belief-text">It's about who you meet, what you feel, and how you change along the way.</p>
+      </div>
+
+      {/* Vision */}
+      <div className="about-vision-section">
+        <p className="section-label">Vision</p>
+        <div className="about-meet-intro">
+          <p>
+            To redefine modern travel by building a global community where people don't just visit destinations—but experience transformation, connection, and freedom through curated, flexible, and meaningful journeys.
+          </p>
         </div>
       </div>
-      
+
+      {/* What We Stand For */}
+      <div className="about-hero-banner">
+        <div className="about-hero-content">
+          <h1>What We Stand For</h1>
+        </div>
+      </div>
+
       <div className="about-features-grid">
-        {features.map((f) => (
+        {standFor.map((f) => (
           <div className="about-feature-card" key={f.title}>
             <h3>{f.title}</h3>
-            <p>{f.text}</p>
+            <p style={{ whiteSpace: 'pre-wrap' }}>{f.text}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* What Makes WanderMesh Different */}
+      <div className="about-hero-banner">
+        <div className="about-hero-content">
+          <h1>What Makes WanderMesh Different</h1>
+        </div>
+      </div>
+
+      <div className="about-diff-lead">
+        <p>Most trips give you an itinerary.</p>
+        <p className="about-diff-highlight">We give you a framework for unforgettable moments.</p>
+      </div>
+
+      <div className="about-features-grid">
+        {different.map((f) => (
+          <div className="about-feature-card" key={f.title}>
+            <h3>{f.title}</h3>
+            <p style={{ whiteSpace: 'pre-wrap' }}>{f.text}</p>
           </div>
         ))}
       </div>

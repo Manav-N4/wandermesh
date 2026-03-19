@@ -561,6 +561,38 @@ ul {
   color: var(--color-text-secondary);
 }
 
+.about-belief-section {
+  text-align: center;
+  padding: 40px 0 60px;
+}
+
+.about-belief-lead {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-label);
+  margin-bottom: 12px;
+}
+
+.about-belief-quote {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.about-belief-text {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.about-vision-section {
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
 .about-hero-banner {
   position: relative;
   padding: 60px 0;
@@ -597,11 +629,30 @@ ul {
   margin: 0;
 }
 
+.about-diff-lead {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-diff-lead p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.about-diff-highlight {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-style: italic;
+}
+
 .about-features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
-  padding: 60px 0;
+  padding: 0 0 60px;
 }
 
 .about-feature-card {
