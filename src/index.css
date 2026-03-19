@@ -1676,7 +1676,7 @@ ul {
 
 @media (max-width: 640px) {
   :root {
-    --section-spacing: 64px;
+    --section-spacing: 32px;
   }
 
   .container {
