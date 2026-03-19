@@ -33,6 +33,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -44,6 +45,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -55,6 +57,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -66,6 +69,7 @@
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -76,6 +80,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -87,6 +92,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -94,9 +100,12 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
@@ -104,9 +113,12 @@
 
 /* Glow effect */
 @keyframes glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.4);
   }
+
   50% {
     box-shadow: 0 0 0 8px rgba(15, 118, 110, 0);
   }
@@ -117,6 +129,7 @@
   0% {
     background-position: -1000px 0;
   }
+
   100% {
     background-position: 1000px 0;
   }
@@ -124,9 +137,12 @@
 
 /* Icon bounce */
 @keyframes iconBounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
@@ -137,6 +153,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(4px);
   }
@@ -200,11 +217,25 @@ ul {
   animation: pulse 2s ease-in-out infinite;
 }
 
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation-delay: 0.5s;
+}
 
 .section-label {
   font-size: 1.5rem;
@@ -212,7 +243,7 @@ ul {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-label);
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   text-align: center;
   transition: color 0.3s ease;
   opacity: 0;
@@ -348,7 +379,7 @@ ul {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.6);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -396,7 +427,7 @@ ul {
 .experiences-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 20px;
 }
 
 .experience-card {
@@ -523,7 +554,7 @@ ul {
 
 .meet-intro {
   max-width: 700px;
-  margin: 0 auto -71px;
+  margin: 0 auto 16px;
   text-align: center;
 }
 
@@ -626,7 +657,7 @@ ul {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-label);
-  margin-bottom: -70px;
+  margin-bottom: 20px;
 }
 
 .about-diff-lead {
@@ -652,7 +683,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
-  padding: 0 0 60px;
+  padding: 0 0 24px;
 }
 
 .about-feature-card {
@@ -683,7 +714,7 @@ ul {
 
 .signup-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 24px;
 }
 
 .steps-pathway {
@@ -753,13 +784,11 @@ ul {
 .step-connector {
   width: 2px;
   height: 40px;
-  background-image: repeating-linear-gradient(
-    180deg,
-    var(--color-accent),
-    var(--color-accent) 4px,
-    transparent 4px,
-    transparent 8px
-  );
+  background-image: repeating-linear-gradient(180deg,
+      var(--color-accent),
+      var(--color-accent) 4px,
+      transparent 4px,
+      transparent 8px);
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -768,7 +797,7 @@ ul {
 .signup-cta {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 24px;
 }
 
 .signup-cta .btn-primary {
@@ -849,6 +878,7 @@ ul {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-280px);
   }
@@ -858,6 +888,7 @@ ul {
   0% {
     transform: translateX(-280px);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -926,7 +957,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   gap: 8px;
   margin: 16px 0;
 }
@@ -1021,7 +1052,7 @@ ul {
 
 .tribe-content {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .tribe-description {
@@ -1154,6 +1185,7 @@ ul {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1365,10 +1397,10 @@ ul {
 .trip-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.35));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35));
 }
 
-.trip-page > .container {
+.trip-page>.container {
   padding-top: 32px;
   padding-bottom: var(--section-spacing);
 }
@@ -1407,7 +1439,7 @@ ul {
 }
 
 .trip-header-info {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .trip-header-info h1 {
@@ -1425,7 +1457,7 @@ ul {
 }
 
 .trip-detail-section {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .trip-detail-section h2 {
@@ -1434,7 +1466,7 @@ ul {
   margin-bottom: 16px;
 }
 
-.trip-detail-section > p {
+.trip-detail-section>p {
   color: var(--color-text-secondary);
   line-height: 1.8;
   font-size: 0.95rem;
@@ -1443,12 +1475,15 @@ ul {
 /* Tabs */
 .trip-tabs {
   display: flex;
-  gap: 0;
+  justify-content: space-evenly;
+  gap: 16px;
   margin-bottom: 24px;
   border-bottom: 2px solid var(--color-border);
 }
 
 .trip-tab {
+  flex: 1;
+  text-align: center;
   padding: 12px 28px;
   font-size: 0.95rem;
   font-weight: 500;
@@ -1571,7 +1606,7 @@ ul {
 }
 
 .accordion-item.open .accordion-content {
-  max-height: 800px;
+  max-height: 4000px;
   padding: 0 28px 20px;
 }
 
@@ -1620,6 +1655,7 @@ ul {
 
 /* Responsive */
 @media (max-width: 900px) {
+
   .experiences-grid,
   .about-features-grid,
   .inclusions-grid {
@@ -1639,6 +1675,7 @@ ul {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-240px);
     }
@@ -1648,6 +1685,7 @@ ul {
     0% {
       transform: translateX(-240px);
     }
+
     100% {
       transform: translateX(0);
     }
@@ -1701,6 +1739,7 @@ ul {
   .inclusions-grid,
   .exclusion-list {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .gallery-row {
@@ -1716,6 +1755,7 @@ ul {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-200px);
     }
@@ -1725,6 +1765,7 @@ ul {
     0% {
       transform: translateX(-200px);
     }
+
     100% {
       transform: translateX(0);
     }

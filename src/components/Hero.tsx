@@ -15,10 +15,6 @@ const Hero = () => {
       <div className="hero-overlay" />
       <div className="hero-content">
         <h1>Where Luxury Meets Solo Exploration</h1>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <button className="btn-primary" onClick={scrollToExperiences}>
           View Experiences
         </button>

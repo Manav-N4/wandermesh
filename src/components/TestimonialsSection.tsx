@@ -53,7 +53,7 @@ const TestimonialsSection = () => {
   return (
     <section className="testimonials-section">
       <div className="container">
-        <p className="section-label">Stories from the Mesh</p>
+        <p className="section-label">Traveller's Voice</p>
         <div className="testimonial-carousel">
           <button className="carousel-arrow carousel-arrow-left" onClick={prev} aria-label="Previous">
             ‹

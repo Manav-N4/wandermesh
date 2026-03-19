@@ -59,6 +59,16 @@ const AboutWanderMesh = () => (
         </div>
       </div>
 
+      {/* Vision */}
+      <div className="about-vision-section">
+        <p className="section-label">Vision</p>
+        <div className="about-meet-intro">
+          <p>
+            To redefine modern travel by building a global community where people don’t just visit destinations—but experience transformation, connection, and freedom through curated, flexible, and meaningful journeys.
+          </p>
+        </div>
+      </div>
+
       {/* What We Stand For */}
       <div className="about-hero-banner">
         <div className="about-hero-content">
