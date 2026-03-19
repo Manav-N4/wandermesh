@@ -121,7 +121,7 @@ const BLRBreakaway = () => {
           </button>
         </div>
       </div>
-      <TestimonialsSection/>
+      <TestimonialsSection />
     </div>
   );
 };

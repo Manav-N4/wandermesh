@@ -825,73 +825,28 @@ ul {
   background: var(--color-cream);
 }
 
-.gallery-stream-wrapper {
-  display: flex;
-  flex-direction: column;
+.gallery-static-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.gallery-row {
-  overflow: hidden;
-  height: 280px;
-}
-
-.gallery-stream {
-  display: flex;
-  gap: 16px;
-  animation: scroll-left 25s linear infinite;
-}
-
-.scroll-left {
-  animation: scroll-left 25s linear infinite;
-}
-
-.scroll-right {
-  animation: scroll-right 25s linear infinite;
-}
-
-.gallery-stream-item {
-  flex: 0 0 280px;
-  height: 280px;
+.gallery-static-item {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--card-shadow);
-  transition: transform 0.4s ease;
+  aspect-ratio: 1;
 }
 
-.gallery-stream-item img {
+.gallery-static-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.gallery-row:hover .gallery-stream-item img {
+.gallery-static-item:hover img {
   transform: scale(1.06);
-}
-
-.gallery-row:hover .gallery-stream {
-  animation-play-state: paused;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-280px);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-280px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
 }
 
 /* Testimonials */
@@ -1694,33 +1649,8 @@ textarea.input-error {
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery-row {
-    height: 240px;
-  }
-
-  .gallery-stream-item {
-    flex: 0 0 240px;
-    height: 240px;
-  }
-
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-240px);
-    }
-  }
-
-  @keyframes scroll-right {
-    0% {
-      transform: translateX(-240px);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
+  .gallery-static-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-grid {
@@ -1774,41 +1704,9 @@ textarea.input-error {
     gap: 16px;
   }
 
-  .gallery-row {
-    height: 200px;
-  }
-
-  .gallery-stream-item {
-    flex: 0 0 200px;
-    height: 200px;
-  }
-
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-200px);
-    }
-  }
-
-  @keyframes scroll-right {
-    0% {
-      transform: translateX(-200px);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  .gallery-stream-wrapper {
+  .gallery-static-grid {
+    grid-template-columns: 1fr;
     gap: 16px;
-  }
-
-  .gallery-row {
-    height: 200px;
   }
 
   .testimonial-split-card {
