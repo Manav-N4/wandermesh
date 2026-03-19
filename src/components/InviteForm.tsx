@@ -224,9 +224,9 @@ const InviteForm = () => {
                       className={errors.experience ? 'input-error' : ''}
                     >
                       <option value="">Select</option>
-                      <option>Vibing in Vietnam</option>
-                      <option>Bali Uncharted</option>
                       <option>BLR Breakaway</option>
+                      <option>Bali Uncharted</option>
+                      <option>Vibing in Vietnam</option>
                     </select>
                     {errors.experience && <span className="error-text">{errors.experience}</span>}
                   </div>

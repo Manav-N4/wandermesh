@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 
 const experiences = [
   {
-    image: '/images/vietnam.jpg',
-    title: 'Vibing in Vietnam',
-    date: '📅 Jun 5 - Jun 14',
-    price: 'INR 59,999',
-    duration: '9 NIGHTS / 10 DAYS',
-    description: 'Join us for a coastal retreat in Vietnam. Cruise between emerald karsts, breathe in the salty breeze, discover lantern-lit alleys, and watch the riverfront glow gold at twilight. Whether craving thrill or calm, this journey helps you set your pace and embrace your rhythm.',
-    link: '/upcoming-loops/vibing-in-vietnam',
+    image: '/images/blr.jpeg',
+    title: 'BLR Breakaway',
+    date: '📅 Mar 29 - Mar 30',
+    price: 'INR 4,999',
+    duration: '1 NIGHT / 2 DAYS',
+    description: 'Step out of the city chaos and into a refreshing day curated for connection, nature, and good vibes. BLR Breakaway is a one-day WanderMesh experience where like-minded strangers come together to unwind, explore, and create memories, just a short drive from Bangalore.',
+    link: '/upcoming-loops/blr-breakaway',
   },
   {
     image: '/images/bali.jpg',
@@ -20,13 +20,13 @@ const experiences = [
     link: '/upcoming-loops/bali-uncharted',
   },
   {
-    image: '/images/blr.jpeg',
-    title: 'BLR Breakaway',
-    date: '📅 Mar 29 - Mar 30',
-    price: 'INR 4,999',
-    duration: '1 NIGHT / 2 DAYS',
-    description: 'Step out of the city chaos and into a refreshing day curated for connection, nature, and good vibes. BLR Breakaway is a one-day WanderMesh experience where like-minded strangers come together to unwind, explore, and create memories, just a short drive from Bangalore.',
-    link: '/upcoming-loops/blr-breakaway',
+    image: '/images/vietnam.jpg',
+    title: 'Vibing in Vietnam',
+    date: '📅 Jun 5 - Jun 14',
+    price: 'INR 59,999',
+    duration: '9 NIGHTS / 10 DAYS',
+    description: 'Join us for a coastal retreat in Vietnam. Cruise between emerald karsts, breathe in the salty breeze, discover lantern-lit alleys, and watch the riverfront glow gold at twilight. Whether craving thrill or calm, this journey helps you set your pace and embrace your rhythm.',
+    link: '/upcoming-loops/vibing-in-vietnam',
   },
 ];
 
