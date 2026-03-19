@@ -52,26 +52,9 @@ const AboutWanderMesh = () => (
         <p className="section-label">About WanderMesh</p>
         <div className="about-meet-intro">
           <p>
-            WanderMesh is a global community of solo travelers who choose experiences over itineraries—where every journey is shaped by people, spontaneity, and moments you can't plan.
-          </p>
-          <p style={{ marginTop: '24px' }}>
-            We started with a simple belief:
-          </p>
-          <p style={{ marginTop: '8px', fontStyle: 'italic', color: 'var(--color-text)', fontWeight: 600 }}>
-            Travel isn't about ticking destinations off a list.
-          </p>
-          <p style={{ marginTop: '8px' }}>
-            It's about who you meet, what you feel, and how you change along the way.
-          </p>
-        </div>
-      </div>
-
-      {/* Vision */}
-      <div className="about-vision-section">
-        <p className="section-label">Vision</p>
-        <div className="about-meet-intro">
-          <p>
-            To redefine modern travel by building a global community where people don't just visit destinations—but experience transformation, connection, and freedom through curated, flexible, and meaningful journeys.
+            WanderMesh is a global community of solo travelers who choose experiences over itineraries—where every journey is shaped by people, spontaneity, and moments you can’t plan. <br></br>
+            We started with a simple belief: Travel isn’t about ticking destinations off a list.<br></br>
+            It’s about who you meet, what you feel, and how you change along the way.
           </p>
         </div>
       </div>

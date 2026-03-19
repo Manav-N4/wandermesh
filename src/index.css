@@ -20,7 +20,7 @@
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   --card-radius: 20px;
   --container-max: 1100px;
-  --section-spacing: 100px;
+  --section-spacing: 64px;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, sans-serif;
 }
@@ -523,7 +523,7 @@ ul {
 
 .meet-intro {
   max-width: 700px;
-  margin: 0 auto 8px;
+  margin: 0 auto -71px;
   text-align: center;
 }
 
@@ -545,7 +545,7 @@ ul {
 }
 
 .about-meet-section {
-  padding: 60px 0;
+  padding: 1px 1px;
   text-align: center;
   background: #fff;
 }
@@ -622,11 +622,11 @@ ul {
 .about-hero-content h1 {
   font-family: var(--font-body);
   font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-weight: 520;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-label);
-  margin: 0;
+  margin-bottom: -70px;
 }
 
 .about-diff-lead {
@@ -1765,7 +1765,7 @@ ul {
   }
 
   .about-hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .steps-pathway {
