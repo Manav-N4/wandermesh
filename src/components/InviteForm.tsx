@@ -58,7 +58,7 @@ const InviteForm = () => {
       newErrors.experience = 'Please select an experience';
     }
     if (!formData.excitement.trim() || formData.excitement.trim().length < 10) {
-       newErrors.excitement = 'Please provide more details (min 10 chars)';
+      newErrors.excitement = 'Please provide more details (min 10 chars)';
     }
 
     setErrors(newErrors);
@@ -85,6 +85,19 @@ const InviteForm = () => {
 
       if (error) throw error;
 
+      // Clear written data on form after submission
+      setFormData({
+        name: '',
+        gender: '',
+        age: '',
+        countryCode: '+91',
+        phone: '',
+        instagram: '',
+        profession: '',
+        experience: '',
+        excitement: '',
+      });
+
       setSubmitted(true);
 
       setTimeout(() => {
@@ -103,7 +116,7 @@ const InviteForm = () => {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>✕</button>
-            
+
             {submitted ? (
               <div className="form-success-modal">
                 <div className="success-icon">✓</div>

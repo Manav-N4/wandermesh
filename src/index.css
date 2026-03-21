@@ -172,6 +172,10 @@ body {
   overflow-x: hidden;
 }
 
+p:not(.section-label) {
+  text-align: left !important;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -321,9 +325,81 @@ ul {
   width: auto;
 }
 
-.header-btn {
-  padding: 10px 24px;
-  font-size: 0.85rem;
+.header-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.hamburger.open span:first-child {
+  transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .header-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 105;
+  }
+  
+  .header-nav.open {
+    right: 0;
+  }
 }
 
 /* Hero */
@@ -412,6 +488,7 @@ ul {
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 32px;
+  text-align: center !important;
 }
 
 .hero .btn-primary {
@@ -520,6 +597,33 @@ ul {
   height: 2px;
   background: var(--color-accent);
   transition: width 0.3s ease;
+}
+
+.request-invite-section {
+  padding: 80px 0;
+  text-align: center;
+  background: var(--color-cream);
+}
+
+.request-invite-section h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.request-invite-section p:not(.section-label) {
+  color: var(--color-text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 10px auto 35px;
+}
+
+.request-invite-section .tagline {
+  font-style: italic;
+  margin-bottom: 30px;
 }
 
 .link-arrow:hover {
@@ -1323,6 +1427,10 @@ textarea.input-error {
   background: var(--color-accent);
   color: rgba(255, 255, 255, 0.75);
   padding: 60px 0 32px;
+}
+
+.site-footer .form-group label {
+  color: #fff;
 }
 
 .footer-grid {

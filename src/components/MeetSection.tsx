@@ -8,7 +8,9 @@ const MeetSection = () => (
       <p className="section-label">About WanderMesh</p>
       <div className="meet-intro">
         <p>
-          WanderMesh is a global community of solo travelers who choose experiences over itineraries—where every journey is shaped by people, spontaneity, and moments you can’t plan.
+           WanderMesh is a global community of solo travelers who choose experiences over itineraries—where every journey is shaped by people, spontaneity, and moments you can’t plan.
+            We started with a simple belief: Travel isn’t about ticking destinations off a list.
+            It’s about who you meet, what you feel, and how you change along the way.
         </p>
         <Link to="/about-wandermesh" className="link-arrow">Learn More {`>`}</Link>
       </div>

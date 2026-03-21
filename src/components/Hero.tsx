@@ -15,6 +15,7 @@ const Hero = () => {
       <div className="hero-overlay" />
       <div className="hero-content">
         <h1>Where Luxury Meets Solo Exploration</h1>
+        <p>Curated, invite-only group journeys for solo travelers across Asia and Europe</p>
         <button className="btn-primary" onClick={scrollToExperiences}>
           View Experiences
         </button>

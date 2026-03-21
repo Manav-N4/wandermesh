@@ -5,6 +5,7 @@ import HowToSignUp from '../components/HowToSignUp';
 import GallerySection from '../components/GallerySection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import InviteForm from '../components/InviteForm';
+import RequestInviteSection from '../components/RequestInviteSection';
 
 const Index = () => (
   <main>
@@ -14,6 +15,7 @@ const Index = () => (
     <HowToSignUp />
     <TestimonialsSection />
     <GallerySection />
+    <RequestInviteSection />
     <InviteForm />
   </main>
 );
