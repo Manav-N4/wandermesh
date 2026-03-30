@@ -37,6 +37,9 @@ const FooterForm = () => {
     if (formData.phone_number.length !== 10) {
       newErrors.phone_number = 'Please enter a valid 10-digit number';
     }
+    if (!formData.instagram_id.trim()) {
+      newErrors.instagram_id = 'Please enter your Instagram ID';
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -133,8 +136,11 @@ const FooterForm = () => {
           name="instagram_id"
           value={formData.instagram_id}
           onChange={handleChange}
+          required
           placeholder="@yourhandle"
+          className={errors.instagram_id ? 'input-error' : ''}
         />
+        {errors.instagram_id && <span className="error-text">{errors.instagram_id}</span>}
       </div>
 
       <button

@@ -36,9 +36,6 @@ const ContactUs = () => (
                 <Youtube size={28} />
               </a>
             </div>
-            <p style={{ fontSize: '0.85rem', fontStyle: 'italic', color: 'var(--color-text-secondary)', lineHeight: '1.4' }}>
-              Disclaimer: Follow at your own risk, we are not responsible if your wanderlust goes out of control )
-            </p>
           </div>
         </div>
       </div>

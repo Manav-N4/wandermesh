@@ -2,15 +2,6 @@ import { Link } from 'react-router-dom';
 
 const experiences = [
   {
-    image: '/images/blr.jpeg',
-    title: 'BLR Breakaway',
-    date: '📅 Mar 29 - Mar 30',
-    price: 'INR 4,999',
-    duration: '1 NIGHT / 2 DAYS',
-    description: 'Step out of the city chaos and into a refreshing day curated for connection, nature, and good vibes. BLR Breakaway is a one-day WanderMesh experience where like-minded strangers come together to unwind, explore, and create memories, just a short drive from Bangalore.',
-    link: '/upcoming-loops/blr-breakaway',
-  },
-  {
     image: '/images/bali.jpg',
     title: 'Bali Uncharted',
     date: '📅 May 1 - May 10',

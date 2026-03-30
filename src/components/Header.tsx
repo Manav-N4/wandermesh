@@ -16,10 +16,34 @@ const Header = () => {
           <img src="/images/NO_BG.png" alt="WanderMesh" />
         </Link>
         <nav className={`header-nav ${mobileMenuOpen ? 'open' : ''}`}>
-          <Link to="/" className="nav-link" onClick={closeMenu}>Home</Link>
-          <a href="/#upcoming-experiences" className="nav-link" onClick={closeMenu}>Upcoming Experiences</a>
-          <Link to="/about-wandermesh" className="nav-link" onClick={closeMenu}>About Us</Link>
-          <Link to="/contact-us" className="nav-link" onClick={closeMenu}>Contact Us</Link>
+          <Link 
+            to="/" 
+            className={`nav-link ${location.pathname === '/' && !location.hash ? 'active' : ''}`} 
+            onClick={closeMenu}
+          >
+            Home
+          </Link>
+          <a 
+            href="/#upcoming-experiences" 
+            className={`nav-link ${location.hash === '#upcoming-experiences' ? 'active' : ''}`} 
+            onClick={closeMenu}
+          >
+            Upcoming Experiences
+          </a>
+          <Link 
+            to="/about-wandermesh" 
+            className={`nav-link ${location.pathname === '/about-wandermesh' ? 'active' : ''}`} 
+            onClick={closeMenu}
+          >
+            About Us
+          </Link>
+          <Link 
+            to="/contact-us" 
+            className={`nav-link ${location.pathname === '/contact-us' ? 'active' : ''}`} 
+            onClick={closeMenu}
+          >
+            Contact Us
+          </Link>
         </nav>
         <button 
           className={`hamburger ${mobileMenuOpen ? 'open' : ''}`} 
