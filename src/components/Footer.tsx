@@ -24,8 +24,8 @@ const Footer = () => {
           </div>
           <div className="footer-col">
             <h4>Legal</h4>
-            <a href="https://www.wandermesh.in/_files/ugd/22bea7_40c7854a3ea54de2b3eafdc9dd2b79f2.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-            <a href="https://www.wandermesh.in/_files/ugd/22bea7_d2b532a6026c414fb10f35835481e656.pdf" target="_blank" rel="noopener noreferrer">Terms of Use</a>
+            <a href="/assets/WanderMesh_Privacy_Policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <a href="/assets/WanderMesh_Terms_and_Conditions.pdf" target="_blank" rel="noopener noreferrer">Terms of Use</a>
           </div>
         </div>
         <div className="footer-bottom" style={{ marginTop: '40px' }}>
