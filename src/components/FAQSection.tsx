@@ -10,50 +10,24 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`faq-item ${isOpen ? 'active' : ''}`} style={{
-      borderBottom: '1px solid var(--color-border)',
-      padding: '20px 0',
-      cursor: 'pointer'
-    }} onClick={() => setIsOpen(!isOpen)}>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: '20px'
-      }}>
-        <h3 style={{
-          fontSize: '1.1rem',
-          fontWeight: '500',
-          margin: 0,
-          color: isOpen ? 'var(--color-accent)' : 'inherit',
-          transition: 'color 0.3s ease',
-          textAlign: 'left'
-        }}>
+    <div className={`faq-item ${isOpen ? 'active' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+      <div className="faq-question-container">
+        <h3 className="faq-question">
           {question}
         </h3>
-        <ChevronDown
-          size={20}
-          style={{
+        <ChevronDown 
+          className="faq-icon"
+          size={20} 
+          style={{ 
             transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
             transition: 'transform 0.3s ease',
             flexShrink: 0,
             color: 'var(--color-accent)'
-          }}
+          }} 
         />
       </div>
-      <div style={{
-        maxHeight: isOpen ? '500px' : '0',
-        overflow: 'hidden',
-        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-        opacity: isOpen ? 1 : 0
-      }}>
-        <p style={{
-          marginTop: '15px',
-          lineHeight: '1.7',
-          color: 'var(--color-text-secondary)',
-          fontSize: '0.95rem',
-          textAlign: 'left'
-        }}>
+      <div className="faq-answer-container">
+        <p className="faq-answer">
           {answer}
         </p>
       </div>
@@ -98,7 +72,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="faq-section" style={{ padding: '80px 0', background: '#fff' }}>
+    <section className="faq-section">
       <div className="container" style={{ maxWidth: '800px' }}>
         <p className="section-label" style={{ textAlign: 'center', marginBottom: '10px' }}>FAQs</p>
         <div className="faq-container">
