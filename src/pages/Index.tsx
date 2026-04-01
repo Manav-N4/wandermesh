@@ -7,6 +7,8 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import InviteForm from '../components/InviteForm';
 import RequestInviteSection from '../components/RequestInviteSection';
 
+import FAQSection from '../components/FAQSection';
+
 const Index = () => (
   <main>
     <Hero />
@@ -16,7 +18,7 @@ const Index = () => (
     <TestimonialsSection />
     <GallerySection />
     <RequestInviteSection />
-    <InviteForm />
+    <FAQSection />
   </main>
 );
 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import FAQSection from '../components/FAQSection';
 import { useInviteModal } from '../context/InviteModalContext';
 
 const inclusions = [
@@ -177,6 +178,7 @@ const VietnamTrip = () => {
         </div>
       </div>
       <TestimonialsSection/>
+      <FAQSection />
     </div>
   );
 };
