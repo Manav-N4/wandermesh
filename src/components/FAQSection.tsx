@@ -15,15 +15,15 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
         <h3 className="faq-question">
           {question}
         </h3>
-        <ChevronDown 
+        <ChevronDown
           className="faq-icon"
-          size={20} 
-          style={{ 
+          size={20}
+          style={{
             transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
             transition: 'transform 0.3s ease',
             flexShrink: 0,
             color: 'var(--color-accent)'
-          }} 
+          }}
         />
       </div>
       <div className="faq-answer-container">
@@ -42,11 +42,11 @@ const FAQSection = () => {
       answer: "WanderMesh is a travel platform that curates unique, community-driven travel experiences. We design immersive trips that combine adventure, culture, and meaningful connections with like-minded travelers."
     },
     {
-      question: "Who can join WanderMesh trips?",
-      answer: "Anyone with a love for travel and new experiences can join. Whether you’re traveling solo, with friends, or as a couple, our trips are designed to be inclusive and welcoming."
+      question: "Who can join WanderMesh experiences?",
+      answer: "Anyone with a love for travel and new experiences can join. Whether you’re traveling solo, with friends, or as a couple, our experiences are designed to be inclusive and welcoming."
     },
     {
-      question: "Are your trips suitable for solo travelers?",
+      question: "Are your experiences suitable for solo travelers?",
       answer: "Absolutely. A majority of our travelers join solo, and our group experiences are structured to help you connect easily and feel comfortable throughout the journey."
     },
     {
@@ -55,7 +55,7 @@ const FAQSection = () => {
     },
     {
       question: "How is the WanderMesh experience different from regular trips?",
-      answer: "WanderMesh is designed to go beyond typical travel. Each trip brings together a curated group of like-minded individuals, making connections feel natural and effortless. Where you stay is part of the experience, with thoughtfully chosen spaces that are immersive and aligned with the destination. Rather than following rigid itineraries or tourist checklists, we focus on creating meaningful moments you’ll remember long after the trip ends. Conversations flow organically, and through curated experiences like mixology and culinary sessions, you naturally learn and grow along the way."
+      answer: "WanderMesh is designed to go beyond typical travel. Each experience brings together a curated group of like-minded individuals, making connections feel natural and effortless. Where you stay is part of the experience, with thoughtfully chosen spaces that are immersive and aligned with the destination. Rather than following rigid itineraries or tourist checklists, we focus on creating meaningful moments you’ll remember long after the trip ends. Conversations flow organically, and through curated experiences like mixology and culinary sessions, you naturally learn and grow along the way."
     },
     {
       question: "What is your cancellation and refund policy?",
