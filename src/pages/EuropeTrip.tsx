@@ -19,7 +19,7 @@ const inclusions = [
   },
   {
     title: 'Activities',
-    desc: 'Guided walking tours across historic old towns\nIconic landmarks and city highlights in each destination\nScenic train and road journeys through Europe\nRiver cruise experience (like Danube in Budapest)\nCastle visits and panoramic viewpoints (like in Prague)\nIsland exploration and beach time (Hvar / Croatian coast)\nBoat day experience with swim stops and hidden coves\nNightlife experiences across cities and islands\nPub crawls and social nights with the group\nLocal food exploration, cafés, and cultural spots\nPlitvice national park day tour'
+    desc: 'Czech Republic (Prague):\n• Old Town Walk in Prague\n• Sunset at Charles Bridge\n• Astronomical Clock Visit\n• Prague Castle Complex Exploration\n• Vltava River Boat Ride\n• Pub Crawl & Nightlife at Karlovy Lazne\n\nHungary (Budapest):\n• Danube Evening Walk in Budapest\n• Buda Castle & Fisherman’s Bastion Views\n• Walk Across Chain Bridge\n• Danube River Cruise Party\n• Ruin Bars Experience at Szimpla Kert\n• Nightlife at Instant-Fogas Complex & Ötkert\n\nCroatia (Zagreb / Hvar / Split):\n• Upper Town Walk in Zagreb\n• Day Trip to Plitvice Lakes National Park\n• Sunset at Hula Hula Beach Bar\n• Explore Hvar Town\n• Boat Trip to Pakleni Islands\n• Views from Fortica Fortress\n• Party at Carpe Diem\n• Ferry to Split\n• Ultra Europe Festival Experience\n• Optional Day Trip to Dubrovnik'
   },
   {
     title: 'Trip Support',

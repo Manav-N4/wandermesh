@@ -8,7 +8,7 @@ const inclusions = [
   { title: 'Accommodation', desc: '9 nights at 3/4 star hotels on a twin sharing basis. Sharing with same Gender for solo travellers' },
   { title: 'Meals', desc: '9 breakfasts + 1 Lunch' },
   { title: 'Transfers', desc: 'Intercity transfers between hotels/ferry terminals and all internal flights.' },
-  { title: 'Activities', desc: 'Halong Bay Cruise\nFansipan Peak Visit in Mono Rail and Cable Car\nCat Cat Village & Mona Cafe\nBa Na Hills Visit\nNightlife experience in Hanoi & Da Nang\nMangrove Forest and Round Basket Boat\nPub Crawl on Beer Street Ticket in Hanoi\nMarble Mountain\nGolden Hand Bridge\nLantern Boat in Hoi An\nKayaking' },
+  { title: 'Activities', desc: '• Halong Bay Cruise\n• Fansipan Peak Visit in Mono Rail and Cable Car\n• Cat Cat Village & Mona Cafe\n• Ba Na Hills Visit\n• Nightlife experience in Hanoi & Da Nang\n• Mangrove Forest and Round Basket Boat\n• Pub Crawl on Beer Street Ticket in Hanoi\n• Marble Mountain\n• Golden Hand Bridge\n• Lantern Boat in Hoi An\n• Kayaking' },
   { title: 'Trip Support', desc: 'Assistance from our expert travel consultants throughout the trip/ trip buddy.\n\nA lot of friends, memories, and adventures!' },
 ];
 

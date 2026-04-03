@@ -8,7 +8,7 @@ const inclusions = [
   { title: 'Accommodation', desc: '9 nights at 3/4 star hotels on a twin sharing basis.' },
   { title: 'Meals', desc: '9 breakfasts' },
   { title: 'Transfers', desc: 'Intercity transfers between hotels/ferry terminals.\nFerry from Bali to Gili Trawangan & Return' },
-  { title: 'Activities', desc: 'ATV tour in Ubud along different landscapes.\nVisit to Traditional homes and coffee plantations.\nCoffee tasting and get a chance to try the famous Kopi Luwak.\nMount Batur volcano by 4WD Jeep Tour and black lava fields.\nNightlife experience in Gili and Seminyak.\n3 island Snorkelling trip from Gili Trawangan.\nBoat Party In Gili Trawangan' },
+  { title: 'Activities', desc: '• ATV tour in Ubud along different landscapes\n• Visit to traditional homes and coffee plantations\n• Coffee tasting including the famous Kopi Luwak\n• Mount Batur volcano 4WD Jeep Tour & black lava fields\n• Nightlife experiences in Gili and Seminyak\n• 3-island snorkelling trip from Gili Trawangan\n• Legendary Gili Trawangan Boat Party' },
   { title: 'Trip Support', desc: 'Assistance from our expert travel consultants throughout the trip/ trip buddy.\n\nA lot of friends, memories, and adventures!' },
 ];
 
