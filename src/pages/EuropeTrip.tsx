@@ -19,7 +19,33 @@ const inclusions = [
   },
   {
     title: 'Activities',
-    desc: 'Czech Republic (Prague):\n• Old Town Walk in Prague\n• Sunset at Charles Bridge\n• Astronomical Clock Visit\n• Prague Castle Complex Exploration\n• Vltava River Boat Ride\n• Pub Crawl & Nightlife at Karlovy Lazne\n\nHungary (Budapest):\n• Danube Evening Walk in Budapest\n• Buda Castle & Fisherman’s Bastion Views\n• Walk Across Chain Bridge\n• Danube River Cruise Party\n• Ruin Bars Experience at Szimpla Kert\n• Nightlife at Instant-Fogas Complex & Ötkert\n\nCroatia (Zagreb / Hvar / Split):\n• Upper Town Walk in Zagreb\n• Day Trip to Plitvice Lakes National Park\n• Sunset at Hula Hula Beach Bar\n• Explore Hvar Town\n• Boat Trip to Pakleni Islands\n• Views from Fortica Fortress\n• Party at Carpe Diem\n• Ferry to Split\n• Ultra Europe Festival Experience\n• Optional Day Trip to Dubrovnik'
+    desc: (
+      <>
+        <strong>Czech Republic (Prague):</strong>{'\n'}
+        • Old Town Walk in Prague{'\n'}
+        • Sunset at Charles Bridge{'\n'}
+        • Astronomical Clock Visit{'\n'}
+        • Prague Castle Complex Exploration{'\n'}
+        • Vltava River Boat Ride{'\n'}
+        • Pub Crawl & Nightlife at Karlovy Lazne{'\n\n'}
+        <strong>Hungary (Budapest):</strong>{'\n'}
+        • Danube Evening Walk in Budapest{'\n'}
+        • Buda Castle & Fisherman’s Bastion Views{'\n'}
+        • Walk Across Chain Bridge{'\n'}
+        • Danube River Cruise Party{'\n'}
+        • Ruin Bars Experience at Szimpla Kert{'\n'}
+        • Nightlife at Instant-Fogas Complex & Ötkert{'\n\n'}
+        <strong>Croatia (Zagreb / Hvar / Split):</strong>{'\n'}
+        • Upper Town Walk in Zagreb{'\n'}
+        • Day Trip to Plitvice Lakes National Park{'\n'}
+        • Sunset at Hula Hula Beach Bar{'\n'}
+        • Explore Hvar Town{'\n'}
+        • Boat Trip to Pakleni Islands{'\n'}
+        • Views from Fortica Fortress{'\n'}
+        • Party at Carpe Diem{'\n'}
+        • Ferry to Split
+      </>
+    )
   },
   {
     title: 'Trip Support',
@@ -32,7 +58,10 @@ const exclusions = [
   { title: 'Visas', desc: 'Schengen Visa cost and processing.' },
   { title: 'Meals', desc: 'Meals not mentioned are excluded (Local dining suggestions available).' },
   { title: 'Airport Transfers', desc: 'Airport Pick up and Drop off.' },
-  { title: 'Optional Activities', desc: 'Dubrovnik, Sparty in Budapest & Ultra Festival passes or any other activities not mentioned in "inclusions".' },
+  {
+    title: 'Optional Activities',
+    desc: '• Trip to Dubrovnik\n• Sparty in Budapest\n• Ultra Festival passes\n• Any other activities not mentioned in "inclusions"'
+  },
   { title: 'Tax', desc: '2% TCS (refundable as per ITR) + 5% GST.' },
   { title: 'Other', desc: 'Personal expenses not included\nAnything not mentioned under inclusions\n\nPlease Note: All the activities mentioned in the itinerary are subject to weather conditions and sea tides.' },
 ];
@@ -128,7 +157,7 @@ const EuropeTrip = () => {
         </div>
 
         <div className="trip-hero-banner">
-          <img src="/images/europe.png" alt="Europe" className="trip-hero-img" />
+          <img src="/images/europe.jpg" alt="Europe" className="trip-hero-img" />
           <div className="trip-hero-overlay" />
         </div>
 
