@@ -20,7 +20,7 @@ const experiences = [
     link: '/upcoming-loops/vibing-in-vietnam',
   },
   {
-    image: '/images/europe.jpg',
+    image: '/images/europe.png',
     title: 'Euro Summer Mesh',
     date: '📅 July 2 - July 13',
     price: 'INR 1,38,000',
