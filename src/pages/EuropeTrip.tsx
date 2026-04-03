@@ -11,7 +11,7 @@ const inclusions = [
   },
   {
     title: 'Meals',
-    desc: '12 breakfasts'
+    desc: '11 breakfasts'
   },
   {
     title: 'Transfers',
