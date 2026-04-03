@@ -19,6 +19,15 @@ const experiences = [
     description: 'Join us for a coastal retreat in Vietnam. Cruise between emerald karsts, breathe in the salty breeze, discover lantern-lit alleys, and watch the riverfront glow gold at twilight. Whether craving thrill or calm, this journey helps you set your pace and embrace your rhythm.',
     link: '/upcoming-loops/vibing-in-vietnam',
   },
+  {
+    image: '/images/europe.png',
+    title: 'Euro Summer Mesh',
+    date: '📅 July 2 - July 13',
+    price: 'INR 1,38,000',
+    duration: '11 NIGHTS / 12 DAYS',
+    description: 'Join us for a summer mesh across Europe. Drift through Prague’s old streets, follow the Danube lights in Budapest, and chase island sunsets and festival nights on Croatia’s coast, all at your own rhythm.',
+    link: '/upcoming-loops/summer-mesh-europe',
+  },
 ];
 
 const UpcomingExperiences = () => (
