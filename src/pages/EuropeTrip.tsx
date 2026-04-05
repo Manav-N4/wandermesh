@@ -40,7 +40,6 @@ const inclusions = [
         • Day Trip to Plitvice Lakes National Park{'\n'}
         • Sunset at Hula Hula Beach Bar{'\n'}
         • Explore Hvar Town{'\n'}
-        • Boat Trip to Pakleni Islands{'\n'}
         • Views from Fortica Fortress{'\n'}
         • Party at Carpe Diem{'\n'}
         • Ferry to Split
@@ -60,7 +59,7 @@ const exclusions = [
   { title: 'Airport Transfers', desc: 'Airport Pick up and Drop off.' },
   {
     title: 'Optional Activities',
-    desc: '• Trip to Dubrovnik\n• Sparty in Budapest\n• Ultra Festival passes\n• Any other activities not mentioned in "inclusions"'
+    desc: '• Trip to Dubrovnik\n• Sparty in Budapest\n• Ultra Festival passes\n• Boat Trip to Pakleni Islands\n• Any other activities not mentioned in "inclusions"'
   },
   { title: 'Tax', desc: '2% TCS (refundable as per ITR) + 5% GST.' },
   { title: 'Other', desc: 'Personal expenses not included\nAnything not mentioned under inclusions\n\nPlease Note: All the activities mentioned in the itinerary are subject to weather conditions and sea tides.' },
@@ -152,7 +151,7 @@ const EuropeTrip = () => {
           <div className="trip-meta">
             <span>📅 July 2 - July 13</span>
             <span>11 NIGHTS / 12 DAYS</span>
-            <span><b>Price: INR 1,38,000</b></span>
+            <span><b>Price: INR 1,29,000</b></span>
           </div>
         </div>
 

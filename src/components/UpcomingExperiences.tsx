@@ -23,7 +23,7 @@ const experiences = [
     image: '/images/europe.jpg',
     title: 'Euro Summer Mesh',
     date: '📅 July 2 - July 13',
-    price: 'INR 1,38,000',
+    price: 'INR 1,29,000',
     duration: '11 NIGHTS / 12 DAYS',
     description: 'Join us for a summer mesh across Europe. Drift through Prague’s old streets, follow the Danube lights in Budapest, and chase island sunsets and festival nights on Croatia’s coast, all at your own rhythm.',
     link: '/upcoming-loops/summer-mesh-europe',
