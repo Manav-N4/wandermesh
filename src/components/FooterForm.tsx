@@ -51,15 +51,21 @@ const FooterForm = () => {
     if (!validate()) return;
     setLoading(true);
 
-    const { data, error } = await supabase
-      .from("join_community")
-      .insert([
-        {
-          full_name: formData.full_name,
-          phone_number: `${formData.countryCode} ${formData.phone_number}`,
-          instagram_handle: formData.instagram_id
-        }
-      ]);
+    const referralCode = localStorage.getItem('referralCode');
+
+    const { data: res, error } = await supabase.rpc("insert_join_with_referral", {
+      p_full_name: formData.full_name,
+      p_phone_number: `${formData.countryCode} ${formData.phone_number}`,
+      p_instagram_handle: formData.instagram_id,
+      p_referral_code: referralCode
+    });
+
+    const resData = res as any;
+    if (resData && !resData.success) {
+      alert(resData.error || "Something went wrong");
+      setLoading(false);
+      return;
+    }
 
     setLoading(false);
 

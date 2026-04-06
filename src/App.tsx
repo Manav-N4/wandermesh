@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { InviteModalProvider } from "./context/InviteModalContext";
+import { useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
@@ -12,9 +13,30 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import InviteForm from "./components/InviteForm";
 
+const ReferralTracker = () => {
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const ref = urlParams.get('ref');
+
+    if (ref) {
+      // First-touch attribution: only store if not already present
+      if (!localStorage.getItem('referralCode')) {
+        localStorage.setItem('referralCode', ref);
+      }
+
+      // Cleanup URL (?ref=...)
+      const newUrl = window.location.pathname + window.location.hash;
+      window.history.replaceState({}, document.title, newUrl);
+    }
+  }, []);
+
+  return null;
+};
+
 const App = () => (
   <BrowserRouter>
     <InviteModalProvider>
+      <ReferralTracker />
       <Header />
       <ScrollToTop />
       <Routes>
