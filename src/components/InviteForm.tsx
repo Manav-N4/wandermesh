@@ -240,6 +240,7 @@ const InviteForm = () => {
                       <option>Bali Uncharted</option>
                       <option>Vibing in Vietnam</option>
                       <option>Euro Summer Mesh</option>
+                      <option>Bali Uncharted 2.0</option>
                     </select>
                     {errors.experience && <span className="error-text">{errors.experience}</span>}
                   </div>

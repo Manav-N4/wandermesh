@@ -13,7 +13,7 @@ const experiences = [
   {
     image: '/images/vietnam.jpg',
     title: 'Vibing in Vietnam',
-    date: '📅 Jun 5 - Jun 14',
+    date: '📅 June 5 - June 14',
     price: 'INR 59,999',
     duration: '9 NIGHTS / 10 DAYS',
     description: 'Join us for a coastal retreat in Vietnam. Cruise between emerald karsts, breathe in the salty breeze, discover lantern-lit alleys, and watch the riverfront glow gold at twilight. Whether craving thrill or calm, this journey helps you set your pace and embrace your rhythm.',
@@ -28,31 +28,42 @@ const experiences = [
     description: 'Join us for a summer mesh across Europe. Drift through Prague’s old streets, follow the Danube lights in Budapest, and chase island sunsets and festival nights on Croatia’s coast, all at your own rhythm.',
     link: '/upcoming-loops/summer-mesh-europe',
   },
+  {
+    image: '/images/bali.jpg',
+    title: 'Bali Uncharted 2.0',
+    date: '📅 July 25 - Aug 2',
+    price: 'INR 56,999',
+    duration: '8 NIGHTS / 9 DAYS',
+    description: 'Adventure reaching new levels. From adrenaline-pumping ATV rides and volcanic treks to the serenity of hidden temples and legendary island boat parties, this 2.0 edition is crafted for those who want to experience the best of Bali, amplified.',
+    link: '/upcoming-loops/bali-uncharted-2',
+  },
 ];
 
-const UpcomingExperiences = () => (
-  <section className="experiences" id="upcoming-experiences">
-    <div className="container">
-      <p className="section-label">Upcoming Experiences</p>
-      <div className="experiences-grid">
-        {experiences.map((exp) => (
-          <div className="experience-card" key={exp.title}>
-            <img className="experience-card-img" src={exp.image} alt={exp.title} />
-            <div className="experience-card-body">
-              <h3>{exp.title}</h3>
-              <div className="experience-meta">
-                <span>{exp.date}</span>
-                <span>{exp.duration}</span>
-                <span><b>Price: {exp.price}</b></span>
+const UpcomingExperiences = () => {
+  return (
+    <section className="experiences" id="upcoming-experiences">
+      <div className="container">
+        <p className="section-label">Upcoming Experiences</p>
+        <div className="experiences-grid">
+          {experiences.map((exp) => (
+            <div className="experience-card" key={exp.title}>
+              <img className="experience-card-img" src={exp.image} alt={exp.title} />
+              <div className="experience-card-body">
+                <h3>{exp.title}</h3>
+                <div className="experience-meta">
+                  <span>{exp.date}</span>
+                  <span>{exp.duration}</span>
+                  <span><b>Price: {exp.price}</b></span>
+                </div>
+                <p>{exp.description}</p>
+                <Link to={exp.link} className="link-arrow">View More {`>`}</Link>
               </div>
-              <p>{exp.description}</p>
-              <Link to={exp.link} className="link-arrow">View More {`>`}</Link>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default UpcomingExperiences;
