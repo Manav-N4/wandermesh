@@ -74,6 +74,16 @@ const FooterForm = () => {
       alert("Something went wrong");
     } else {
       setSubmitted(true);
+
+      // Track successful submission in GTM/GA
+      if (typeof window !== 'undefined') {
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push({
+          'event': 'footer_join_success',
+          'form_name': 'footer_registration_form'
+        });
+      }
+
       setFormData({ full_name: '', countryCode: '+91', phone_number: '', instagram_id: '' });
       setTimeout(() => setSubmitted(false), 7000);
     }

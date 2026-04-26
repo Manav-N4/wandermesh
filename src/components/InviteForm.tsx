@@ -100,6 +100,16 @@ const InviteForm = () => {
 
       setSubmitted(true);
 
+      // Track successful submission in GTM/GA
+      if (typeof window !== 'undefined') {
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push({
+          'event': 'request_invite_success',
+          'trip_interest': formData.experience,
+          'form_name': 'modal_invite_form'
+        });
+      }
+
       setTimeout(() => {
         closeModal();
         setSubmitted(false);
