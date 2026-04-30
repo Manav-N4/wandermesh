@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '../components/FAQSection';
-import { useInviteModal } from '../context/InviteModalContext';
+import RequestInviteSection from '../components/RequestInviteSection';
 
 const inclusions = [
   {
@@ -137,7 +137,6 @@ const itinerary = [
 const EuropeTrip = () => {
   const [activeTab, setActiveTab] = useState('inclusions');
   const [openDay, setOpenDay] = useState(null);
-  const { openModal } = useInviteModal();
 
   const toggleDay = (day) => setOpenDay(openDay === day ? null : day);
 
@@ -219,12 +218,10 @@ const EuropeTrip = () => {
             ))}
           </div>
         </div>
-        <div className="signup-cta" style={{ marginBottom: '40px' }}>
-          <button className="btn-primary" onClick={openModal}>
-            Request Your Invite
-          </button>
-        </div>
       </div>
+      
+      <RequestInviteSection />
+      
       <TestimonialsSection />
       <FAQSection />
     </div>

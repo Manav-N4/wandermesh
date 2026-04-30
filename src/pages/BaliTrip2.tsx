@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '../components/FAQSection';
-import { useInviteModal } from '../context/InviteModalContext';
+import RequestInviteSection from '../components/RequestInviteSection';
 
 const inclusions = [
   { title: 'Accommodation', desc: '8 nights at 3/4 star hotels on a twin sharing basis.' },
@@ -82,7 +82,6 @@ const itinerary = [
 const BaliTrip2 = () => {
   const [activeTab, setActiveTab] = useState('inclusions');
   const [openDay, setOpenDay] = useState<string | null>(null);
-  const { openModal } = useInviteModal();
 
   const toggleDay = (day: string) => setOpenDay(openDay === day ? null : day);
 
@@ -165,12 +164,10 @@ const BaliTrip2 = () => {
             ))}
           </div>
         </div>
-        <div className="signup-cta" style={{ marginBottom: '40px' }}>
-          <button className="btn-primary" onClick={openModal}>
-            Request Your Invite
-          </button>
-        </div>
       </div>
+      
+      <RequestInviteSection />
+      
       <TestimonialsSection/>
       <FAQSection />
     </div>

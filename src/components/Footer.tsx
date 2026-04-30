@@ -1,14 +1,9 @@
 import { Instagram, Facebook, Youtube } from 'lucide-react';
-import FooterForm from './FooterForm';
 
 const Footer = () => {
   return (
     <footer className="site-footer" style={{ textAlign: 'center' }}>
       <div className="container">
-        <div style={{ marginBottom: '40px' }}>
-          <h4 style={{ color: '#fff', fontFamily: 'var(--font-display)', marginBottom: '15px' }}>Join WanderMesh Community</h4>
-          <FooterForm />
-        </div>
         <div className="footer-grid">
           <div className="footer-col">
             <h4>Contact Us</h4>

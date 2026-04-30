@@ -1,5 +1,3 @@
-import { useInviteModal } from '../context/InviteModalContext';
-
 const steps = [
   {
     number: 1,
@@ -54,7 +52,13 @@ const IconCommunity = () => (
 const icons = [IconForm, IconConversation, IconCommunity];
 
 const HowToSignUp = () => {
-  const { openModal } = useInviteModal();
+  const scrollToRequestInvite = () => {
+    if (window.location.pathname === '/') {
+      document.getElementById('request-invite')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = "/#request-invite";
+    }
+  };
 
   return (
     <section className="signup-steps-section">
@@ -81,7 +85,7 @@ const HowToSignUp = () => {
           })}
         </div>
         <div className="signup-cta">
-          <button className="btn btn-primary" onClick={openModal}>
+          <button className="btn btn-primary" onClick={scrollToRequestInvite}>
             Request Your Invite
           </button>
         </div>

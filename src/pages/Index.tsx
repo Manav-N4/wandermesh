@@ -4,7 +4,6 @@ import MeetSection from '../components/MeetSection';
 import HowToSignUp from '../components/HowToSignUp';
 import GallerySection from '../components/GallerySection';
 import TestimonialsSection from '../components/TestimonialsSection';
-import InviteForm from '../components/InviteForm';
 import RequestInviteSection from '../components/RequestInviteSection';
 
 import FAQSection from '../components/FAQSection';

@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { InviteModalProvider } from "./context/InviteModalContext";
 import { useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,7 +11,7 @@ import AboutWanderMesh from "./pages/AboutWanderMesh";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-import InviteForm from "./components/InviteForm";
+import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
 
 const ReferralTracker = () => {
   useEffect(() => {
@@ -36,23 +35,21 @@ const ReferralTracker = () => {
 
 const App = () => (
   <BrowserRouter>
-    <InviteModalProvider>
-      <ReferralTracker />
-      <Header />
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/upcoming-loops/vibing-in-vietnam" element={<VietnamTrip />} />
-        <Route path="/upcoming-loops/bali-uncharted" element={<BaliTrip />} />
-        <Route path="/upcoming-loops/bali-uncharted-2" element={<BaliTrip2 />} />
-        <Route path="/upcoming-loops/summer-mesh-europe" element={<EuropeTrip />} />
-        <Route path="/about-wandermesh" element={<AboutWanderMesh />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-      <InviteForm />
-    </InviteModalProvider>
+    <ReferralTracker />
+    <Header />
+    <ScrollToTop />
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/upcoming-loops/vibing-in-vietnam" element={<VietnamTrip />} />
+      <Route path="/upcoming-loops/bali-uncharted" element={<BaliTrip />} />
+      <Route path="/upcoming-loops/bali-uncharted-2" element={<BaliTrip2 />} />
+      <Route path="/upcoming-loops/summer-mesh-europe" element={<EuropeTrip />} />
+      <Route path="/about-wandermesh" element={<AboutWanderMesh />} />
+      <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+    <Footer />
+    <WhatsAppFloatingButton />
   </BrowserRouter>
 );
 

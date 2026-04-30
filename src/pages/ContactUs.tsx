@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Youtube } from 'lucide-react';
+import FooterForm from '../components/FooterForm';
 
 const ContactUs = () => (
   <div className="about-page" style={{ minHeight: '60vh', marginTop: '100px' }}>
     <div className="container">
       <Link to="/" className="trip-back">← Back to Home</Link>
-      
+
       <div className="about-meet-section" style={{ padding: '40px 0' }}>
         <p className="section-label">Contact Us</p>
         <div className="about-meet-intro" style={{ marginBottom: '40px' }}>
@@ -13,7 +14,24 @@ const ContactUs = () => (
             "All those who wander are not lost. In case you are, we are here to help"
           </p>
         </div>
-        
+
+        {/* Join Community Form Section */}
+        <div style={{
+          maxWidth: '600px',
+          margin: '0 auto 60px',
+          padding: '2.5rem',
+          background: '#fff',
+          borderRadius: 'var(--card-radius)',
+          boxShadow: 'var(--card-shadow)',
+          border: '1px solid var(--color-border)'
+        }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', marginBottom: '10px', color: 'var(--color-text)' }}>Join WanderMesh Community</h3>
+          <p style={{ color: 'var(--color-text-secondary)', marginBottom: '25px', fontSize: '1.05rem' }}>
+            Sign up to be the first to know about upcoming exclusive experiences.
+          </p>
+          <FooterForm />
+        </div>
+
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', textAlign: 'center', marginBottom: '60px' }}>
           <div className="about-feature-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <h3 style={{ fontFamily: 'var(--font-display)', marginBottom: '10px' }}>WhatsApp Us</h3>
@@ -38,6 +56,7 @@ const ContactUs = () => (
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
