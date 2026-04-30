@@ -383,7 +383,7 @@ const RequestInviteSection = () => {
                     <button type="button" onClick={handlePrevStep} className="btn-outline" style={{ flex: 1, padding: '14px 32px' }}>
                       Back
                     </button>
-                    <button type="submit" className="btn-primary" style={{ flex: 2 }}>
+                    <button type="submit" id="submit-request-button" className="btn-primary" style={{ flex: 2 }}>
                       Submit Request
                     </button>
                   </div>
