@@ -363,7 +363,7 @@ const RequestInviteSection = () => {
 
                   <div className="form-row">
                     <div className="form-col">
-                      <label htmlFor="excitement" className="luxury-label">Why join WanderMesh?</label>
+                      <label htmlFor="excitement" className="luxury-label">What would you bring to a WanderMesh experience, and how would it make it better for others?</label>
                       <textarea
                         id="excitement"
                         name="excitement"
