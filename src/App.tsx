@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import VietnamTrip from "./pages/VietnamTrip";
-import BaliTrip from "./pages/BaliTrip";
 import BaliTrip2 from "./pages/BaliTrip2";
 import EuropeTrip from "./pages/EuropeTrip";
 import AboutWanderMesh from "./pages/AboutWanderMesh";
@@ -41,7 +40,6 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/upcoming-loops/vibing-in-vietnam" element={<VietnamTrip />} />
-      <Route path="/upcoming-loops/bali-uncharted" element={<BaliTrip />} />
       <Route path="/upcoming-loops/bali-uncharted-2" element={<BaliTrip2 />} />
       <Route path="/upcoming-loops/summer-mesh-europe" element={<EuropeTrip />} />
       <Route path="/about-wandermesh" element={<AboutWanderMesh />} />

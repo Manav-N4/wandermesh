@@ -2,15 +2,6 @@ import { Link } from 'react-router-dom';
 
 const experiences = [
   {
-    image: '/images/bali.jpg',
-    title: 'Bali Uncharted',
-    date: '📅 May 1 - May 10',
-    price: 'INR 56,999',
-    duration: '9 NIGHTS / 10 DAYS',
-    description: 'Join us for a tropical retreat in Bali. Wander through emerald rice terraces, breathe in the ocean breeze, explore vibrant markets, and watch the sky blush pink at sunset. Whether you seek adventure or stillness, this escape lets you move freely and discover your rhythm.',
-    link: '/upcoming-loops/bali-uncharted',
-  },
-  {
     image: '/images/vietnam.jpg',
     title: 'Vibing in Vietnam',
     date: '📅 June 5 - June 14',

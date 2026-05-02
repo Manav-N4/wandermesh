@@ -292,7 +292,6 @@ const RequestInviteSection = () => {
                         className={`luxury-input ${errors.experience ? 'input-error' : ''}`}
                       >
                         <option value="">Select</option>
-                        <option>Bali Uncharted</option>
                         <option>Vibing in Vietnam</option>
                         <option>Euro Summer Mesh</option>
                         <option>Bali Uncharted 2.0</option>
